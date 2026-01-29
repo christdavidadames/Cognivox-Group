@@ -77,7 +77,7 @@ a:hover { text-decoration: underline; }
 
 /* Logo tamaños (mantengo tus valores) */
 .logo--header { height: 250px; width: auto; flex-shrink: 0; margin-left: -150px }
-.logo--footer { height: 500px; width: auto; margin-right: 200px; }
+.logo--footer { height: 400px; width: auto; margin-right: 200px; }
 
 .badge {
   display:inline-block;
@@ -379,6 +379,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   transform: scale(1.05);    /* efecto de “crecer” un poco */
   color: #fff;
 }
+
 
 
 
