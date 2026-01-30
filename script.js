@@ -1,19 +1,23 @@
-// Dropdown "Servicios" (hover en desktop + click accesible)
+// ====== Dropdown "Servicios" (hover en desktop + click accesible) ======
 document.addEventListener('DOMContentLoaded', () => {
   const services = document.querySelector('#services');
   const menu = document.querySelector('#servicesMenu');
   const toggle = document.querySelector('#servicesToggle');
 
   if (services && menu && toggle) {
-    // Hover (desktop)
-    services.addEventListener('mouseenter', () => {
-      menu.classList.remove('hidden');
-      toggle.setAttribute('aria-expanded', 'true');
-    });
-    services.addEventListener('mouseleave', () => {
+    const closeMenu = () => {
       menu.classList.add('hidden');
       toggle.setAttribute('aria-expanded', 'false');
-    });
+    };
+
+    const openMenu = () => {
+      menu.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    };
+
+    // Hover (desktop)
+    services.addEventListener('mouseenter', () => openMenu());
+    services.addEventListener('mouseleave', () => closeMenu());
 
     // Click (fallback / accesible)
     toggle.addEventListener('click', (e) => {
@@ -24,15 +28,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cerrar al hacer click en un enlace del menú
     menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+      a.addEventListener('click', () => closeMenu());
+    });
+
+    // ✅ Cerrar al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!services.contains(e.target)) closeMenu();
+    });
+
+    // ✅ Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
     });
   }
 });
 
-// === Hero: rotar imágenes + frases centradas ===
+// ====== Menú móvil (botón ☰) ======
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('menuBtn');
+  const panel = document.getElementById('mobilePanel');
+
+  if (!btn || !panel) return;
+
+  const openPanel = () => {
+    panel.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+  };
+
+  const closePanel = () => {
+    panel.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  btn.addEventListener('click', () => {
+    const isHidden = panel.classList.contains('hidden');
+    isHidden ? openPanel() : closePanel();
+  });
+
+  // Cerrar al hacer click en un link del panel
+  panel.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closePanel());
+  });
+
+  // Cerrar al hacer click fuera
+  document.addEventListener('click', (e) => {
+    const clickedInside = panel.contains(e.target) || btn.contains(e.target);
+    if (!clickedInside) closePanel();
+  });
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePanel();
+  });
+
+  // ✅ Si cambias a desktop (resize), cerramos el panel para evitar estados raros
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closePanel();
+  });
+});
+
+// ====== Hero: rotar imágenes + frases centradas ======
 document.addEventListener('DOMContentLoaded', () => {
   const imgEl = document.getElementById('heroSlide');
   const capEl = document.getElementById('heroCaption');
@@ -54,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   slides.forEach(src => { const im = new Image(); im.src = src; });
 
   let i = 0;
-  const DURATION = 5000; // ms entre cambios (ajusta a tu gusto)
+  const DURATION = 5000; // ms entre cambios
 
   // helper para reiniciar animación
   function animateOnce(el, className) {
@@ -70,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     capEl.textContent = captions[i];
     capEl.setAttribute('aria-label', captions[i]);
 
-    // Re-lanzar animaciones opuestas
+    // Re-lanzar animaciones
     animateOnce(imgEl.parentElement, 'is-animating'); // contenedor .hero-visual
     animateOnce(capEl, 'is-animating');
   }
