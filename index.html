@@ -5,34 +5,29 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Cognivox Group | Cuidamos tu mente, fortalecemos tu voz</title>
-  <meta name="description" content="Cognivox Group: atención integral en logopedia y psicología. Cuidamos tu mente, fortalecemos tu voz. Agenda tu cita en Santo Domingo." />
+  <meta name="description" content="Cognivox Group: servicios especializados en logopedia y psicología. Un enfoque integral para tu bienestar. Cuidamos tu mente, fortalecemos tu voz." />
 
-  <!-- Open Graph (mejor vista al compartir) -->
-  <meta property="og:title" content="Cognivox Group" />
-  <meta property="og:description" content="Cuidamos tu mente, fortalecemos tu voz. Atención integral en logopedia y psicología." />
-  <meta property="og:type" content="website" />
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <!-- Skip link (accesibilidad) -->
+
+  <!-- Skip link (accesibilidad, no afecta tu diseño si no lo estilizas) -->
   <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
   <!-- Header / Nav -->
   <header class="header-main">
     <div class="container nav">
       <a href="./index.html" aria-label="Ir a inicio">
-        <img
-          src="./images/inicio/logo-empresa.png"
-          alt="Logo Cognivox Group"
-          class="logo--header"
-          onerror="this.src='https://via.placeholder.com/160x64?text=Logo';"
-        />
+        <img src="./images/inicio/logo-empresa.png"
+             alt="Logo Cognivox Group"
+             class="logo--header"
+             loading="eager"
+             decoding="async"
+             onerror="this.src='https://via.placeholder.com/160x64?text=Logo';" />
       </a>
 
-      <nav class="show-md" aria-label="Navegación principal" style="gap:.25rem;">
+      <nav class="show-md" style="gap:.25rem;" aria-label="Navegación principal">
         <a href="./index.html" class="active" aria-current="page">Inicio</a>
         <a href="./about.html">Nosotros</a>
 
@@ -50,54 +45,27 @@
         <a href="./multimedia.html">Multimedia</a>
         <a href="./contact.html" class="btn-cita">Agende su cita</a>
       </nav>
-
-      <!-- Botón menú móvil (antes no estaba en index) -->
-      <button id="menuBtn" class="menu-btn" aria-label="Abrir menú" aria-controls="mobilePanel" aria-expanded="false">☰</button>
-    </div>
-
-    <!-- Panel móvil (antes no estaba en index) -->
-    <div id="mobilePanel" class="hidden" aria-label="Menú móvil">
-      <div class="container" style="display:grid;gap:.5rem;">
-        <a href="./index.html" aria-current="page">Inicio</a>
-        <a href="./about.html">Nosotros</a>
-        <a href="./services/logopedia.html">Logopedia</a>
-        <a href="./services/psicologia.html">Psicología</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./events.html">Eventos</a>
-        <a href="./multimedia.html">Multimedia</a>
-        <a href="./contact.html" class="btn-cita">Agende su cita</a>
-      </div>
     </div>
   </header>
 
   <main id="contenido">
     <!-- Hero -->
-    <section class="hero" aria-label="Sección principal">
+    <section class="hero">
       <div class="container grid grid-md-2" style="align-items:center;gap:2rem;">
-        <!-- Columna izquierda: logo con eslogan + CTA -->
+        <!-- Columna izquierda: logo con eslogan -->
         <div class="hero-left">
           <img
             src="./images/inicio/logo-empresa-con-eslogan.png"
             alt="Cognivox Group. Cuidamos tu mente, fortalecemos tu voz"
             class="logo-eslogan"
+            loading="eager"
+            decoding="async"
             onerror="this.src='https://via.placeholder.com/800x300?text=Logo+con+eslogan';"
           />
-
-          <!-- CTA (no cambia rutas, solo mejora conversión) -->
-          <div style="margin-top: 360px; display:flex; gap:.75rem; flex-wrap:wrap;">
-            <a class="btn-cita" href="./contact.html">Agendar cita</a>
-            <a class="btn" href="https://wa.me/18299058799?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20cita." target="_blank" rel="noopener">
-              WhatsApp
-            </a>
-          </div>
-
-          <p class="muted" style="margin-top: .75rem; color:#e5e7eb;">
-            Atención integral en <strong>logopedia</strong> y <strong>psicología</strong> con enfoque humano, confidencial y basado en evidencia.
-          </p>
         </div>
 
-        <!-- Columna derecha: carrusel -->
-        <div class="hero-right" aria-label="Galería destacada">
+        <!-- Columna derecha: carrusel (ligeramente desplazado a la derecha) -->
+        <div class="hero-right" aria-label="Carrusel principal">
           <div class="hero-visual hero-visual--shift is-animating">
             <img
               id="heroSlide"
@@ -118,19 +86,17 @@
       <div class="container">
         <h2>Nuestros Servicios Especializados</h2>
         <p class="muted">Un enfoque integral para tu bienestar</p>
-
         <div class="grid grid-md-2" style="margin-top:1rem;">
-          <article class="card">
+          <div class="card">
             <h3 class="badge-service">Logopedia</h3>
             <p>Habla, lenguaje, voz y deglución con técnicas avanzadas y trato humano.</p>
             <p><a class="btn" href="./services/logopedia.html">Saber más →</a></p>
-          </article>
-
-          <article class="card">
+          </div>
+          <div class="card">
             <h3 class="badge-service">Psicología</h3>
             <p>Salud mental en todas las etapas: infantil, adultos, pareja y familia.</p>
             <p><a class="btn" href="./services/psicologia.html">Saber más →</a></p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -140,18 +106,9 @@
       <div class="container">
         <h2>¿Por qué elegirnos?</h2>
         <div class="grid grid-3" style="margin-top:1rem;">
-          <div class="card">
-            <h4>Equipo profesional</h4>
-            <p class="muted">Acompañamiento especializado, cercano y ético.</p>
-          </div>
-          <div class="card">
-            <h4>Enfoque personalizado</h4>
-            <p class="muted">Planes de intervención adaptados a cada caso.</p>
-          </div>
-          <div class="card">
-            <h4>Ambiente seguro</h4>
-            <p class="muted">Atención confidencial en un entorno acogedor.</p>
-          </div>
+          <div class="card"><h4>Equipo profesional</h4><p class="muted">Terapeutas certificados con amplia experiencia.</p></div>
+          <div class="card"><h4>Enfoque personalizado</h4><p class="muted">Planes de tratamiento adaptados a cada caso.</p></div>
+          <div class="card"><h4>Ambiente acogedor</h4><p class="muted">Instalaciones modernas y seguras.</p></div>
         </div>
       </div>
     </section>
@@ -161,23 +118,17 @@
   <footer class="footer">
     <div class="container grid grid-md-2" style="gap:2rem;">
       <div>
-        <img
-          src="./images/inicio/Logo-empresa-footer.png"
-          alt="Logo Cognivox Group"
-          class="logo logo--footer"
-          onerror="this.src='https://via.placeholder.com/160x56?text=Logo';"
-          loading="lazy"
-          decoding="async"
-        />
+        <img src="./images/inicio/Logo-empresa-footer.png"
+             alt="Logo Cognivox Group"
+             class="logo logo--footer"
+             loading="lazy"
+             decoding="async"
+             onerror="this.src='https://via.placeholder.com/160x56?text=Logo';" />
       </div>
-
       <div>
         <h4>Contacto</h4>
         <p>Avenida independencia Km 9 ½ de la Carretera Sánchez, Edificio Corimar, ll Suite 3-D, Santo Domingo, Distrito Nacional.</p>
-        <p>
-          <a href="tel:+18495851999">+1 (849) 585-1999</a> ·
-          <a href="mailto:mtolentino41@uasd.edu.do">mtolentino41@uasd.edu.do</a>
-        </p>
+        <p><a href="tel:+18495851999">+1 (849) 585-1999</a> · <a href="mailto:mtolentino41@uasd.edu.do">mtolentino41@uasd.edu.do</a></p>
         <hr class="soft" />
         <small>© <span id="y"></span> Cognivox Group. Todos los derechos reservados.</small>
       </div>
@@ -185,8 +136,6 @@
   </footer>
 
   <script src="./script.js"></script>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
