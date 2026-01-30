@@ -1,8 +1,12 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Psicología – Cognivox Group</title>
+  <meta name="description" content="Servicios de psicología en Cognivox Group: terapia infanto-juvenil, adultos, pareja y familia, evaluación psicopedagógica y orientación." />
+
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -10,72 +14,101 @@
   <!-- Header -->
   <header class="header-main">
     <div class="container nav">
-      <a href="../index.html">
+      <a href="../index.html" aria-label="Ir a inicio">
         <img src="../images/inicio/logo-empresa.png" alt="Logo Cognivox Group" class="logo--header"
+             loading="eager" decoding="async"
              onerror="this.src='https://via.placeholder.com/160x64?text=Logo';" />
       </a>
-      <nav class="show-md" style="gap:.25rem;">
+
+      <nav class="show-md" style="gap:.25rem;" aria-label="Navegación principal">
         <a href="../index.html">Inicio</a>
         <a href="../about.html">Nosotros</a>
+
         <span class="dropdown" id="services">
-          <a href="#" id="servicesToggle" aria-haspopup="true">Servicios▾</a>
-          <span class="dropdown-menu hidden" id="servicesMenu">
-            <a href="./logopedia.html">Logopedia</a>
-            <a href="./psicologia.html" class="active">Psicología</a>
+          <a href="#" id="servicesToggle" aria-haspopup="true" aria-expanded="false">Servicios▾</a>
+          <span class="dropdown-menu hidden" id="servicesMenu" role="menu" aria-label="Servicios">
+            <a href="./logopedia.html" role="menuitem">Logopedia</a>
+            <a href="./psicologia.html" class="active" aria-current="page" role="menuitem">Psicología</a>
           </span>
         </span>
+
         <a href="../blog.html">Blog</a>
         <a href="../events.html">Eventos</a>
         <a href="../multimedia.html">Multimedia</a>
         <a href="../contact.html" class="btn-cita">Agende su cita</a>
       </nav>
-      <button id="menuBtn" class="menu-btn">☰</button>
+
+      <button id="menuBtn" class="menu-btn" aria-label="Abrir menú" aria-controls="mobilePanel" aria-expanded="false">☰</button>
     </div>
-    <div id="mobilePanel" class="hidden">
+
+    <div id="mobilePanel" class="hidden" aria-label="Menú móvil">
       <div class="container" style="display:grid;gap:.5rem;">
         <a href="../index.html">Inicio</a>
         <a href="../about.html">Nosotros</a>
         <a href="./logopedia.html">Logopedia</a>
-        <a href="./psicologia.html">Psicología</a>
+        <a href="./psicologia.html" aria-current="page">Psicología</a>
         <a href="../blog.html">Blog</a>
-        <a href="./events.html">Eventos</a>
-        <a href="./multimedia.html">Multimedia</a>
+
+        <!-- ✅ Corrección: desde /services/ deben subir un nivel -->
+        <a href="../events.html">Eventos</a>
+        <a href="../multimedia.html">Multimedia</a>
+
         <a href="../contact.html" class="btn-cita">Agende su cita</a>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container" style="text-align:center;">
-      <img src="../images/services/hero-psicologia.jpg" alt="Psicología"
-           class="hero-psicologia"
-           onerror="this.src='https://via.placeholder.com/1600x500?text=Psicologia';" />
-      <h1 style="margin-top:1rem;">Psicología</h1>
-      <p class="muted" style="color:#e5e7eb;">Cuidando tu bienestar emocional.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Nuestros Servicios de Psicología</h2>
-      <p class="muted">Acompañamiento seguro y confidencial para el bienestar mental.</p>
-      <div class="grid grid-3" style="margin-top:1rem;">
-        <div class="card"><h4>Terapia Infanto-Juvenil</h4><p>Emociones, ansiedad, conducta, TDAH.</p></div>
-        <div class="card"><h4>Terapia para Adultos</h4><p>Ansiedad, depresión, estrés, duelo, desarrollo personal.</p></div>
-        <div class="card"><h4>Terapia de Pareja y Familia</h4><p>Comunicación, resolución de conflictos, vínculos.</p></div>
-        <div class="card"><h4>Evaluación Psicopedagógica</h4><p>Aprendizaje, altas capacidades y orientación vocacional.</p></div>
+  <main id="contenido">
+    <section class="hero">
+      <div class="container" style="text-align:center;">
+        <img src="../images/services/hero-psicologia.jpg" alt="Psicología"
+             class="hero-psicologia"
+             loading="eager" decoding="async"
+             onerror="this.src='https://via.placeholder.com/1600x500?text=Psicologia';" />
+        <h1 style="margin-top:1rem;">Psicología</h1>
+        <p class="muted" style="color:#e5e7eb;">Cuidando tu bienestar emocional.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Nuestros Servicios de Psicología</h2>
+        <p class="muted">Acompañamiento seguro y confidencial para el bienestar mental.</p>
+
+        <div class="grid grid-3" style="margin-top:1rem;">
+          <article class="card">
+            <h4>Terapia infanto-juvenil</h4>
+            <p>Emociones, ansiedad, conducta y apoyo en TDAH.</p>
+          </article>
+
+          <article class="card">
+            <h4>Terapia para adultos</h4>
+            <p>Ansiedad, depresión, estrés, duelo y desarrollo personal.</p>
+          </article>
+
+          <article class="card">
+            <h4>Terapia de pareja y familia</h4>
+            <p>Comunicación, resolución de conflictos y fortalecimiento de vínculos.</p>
+          </article>
+
+          <article class="card">
+            <h4>Evaluación psicopedagógica</h4>
+            <p>Aprendizaje, altas capacidades y orientación vocacional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container grid grid-md-2" style="gap:2rem;">
       <div>
-        <img src="../images/inicio/Logo-empresa-footer.png" alt="Logo" class="logo logo--footer"
+        <img src="../images/inicio/Logo-empresa-footer.png" alt="Logo Cognivox Group" class="logo logo--footer"
+             loading="lazy" decoding="async"
              onerror="this.src='https://via.placeholder.com/160x56?text=Logo';" />
-    
       </div>
+
       <div>
         <h4>Contacto</h4>
         <p>Avenida independencia Km 9 ½ de la Carretera Sánchez, Edificio Corimar, ll Suite 3-D, Santo Domingo, Distrito Nacional.</p>
@@ -86,16 +119,7 @@
     </div>
   </footer>
 
-  <script src="../script.js"></script><script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script src="../script.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
