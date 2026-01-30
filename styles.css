@@ -19,109 +19,102 @@ a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
 
-/* 🔒 Oculta el botón de las tres rayitas (hamburguesa) */
-.menu-btn { display: none !important; }
+/* Accesibilidad */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: #fff;
+  color: var(--blue);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid #e5e7eb;
+  z-index: 9999;
+}
+.skip-link:focus { left: 12px; }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 
 /* ------------------- TOP BAR + HEADER ------------------- */
 .header-top {
   background: #fff;
   color: var(--blue);
   font-size: 0.875rem;
-  margin-left: -250px;
 }
 
+/* Header base (mobile-first) */
 .header-main {
   position: sticky;
   top: 0;
   z-index: 10;
   background: #fff;
   border-bottom: 10px solid #e5e7eb;
-  height: 150px;
+  height: 92px;
   display: flex;
   align-items: center;
 }
 
 /* Navegación */
-.nav { display: flex; align-items: center; justify-content: space-between; }
-.nav nav { margin-left: 27rem; } /* (mantengo tu ajuste original) */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.nav nav { margin-left: 0; }
 .nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
-/* Alinear el botón "Servicios" con el resto */
-.header-main .nav a,
-.header-main .nav .dropdown {
-  display: inline-flex;
-  align-items: center;
-  height: 48px;
-}
-
-/* Baja un pelín todo el botón "Servicios" */
-.header-main .nav .dropdown {
-  transform: translateY(1px); /* prueba 1, 2 o 3 */
-}
-
-/* Normaliza la altura de la línea del texto dentro del link */
-.header-main .nav .dropdown > a {
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-}
-
-
-/* En el header azul, links blancos y activo/hover también blanco */
+/* Links */
 .header-main .nav a { color: var(--blue); }
 .header-main .nav a.active,
-.header-main .nav a:hover { 
-  color: var(--blue); 
+.header-main .nav a:hover {
+  color: var(--blue);
   text-decoration: underline;
 }
 
-/* Logo tamaños (mantengo tus valores) */
-.logo--header { height: 250px; width: auto; flex-shrink: 0; margin-left: -150px }
-.logo--footer { height: 400px; width: auto; margin-right: 200px; }
+/* Logo tamaños (mobile-first) */
+.logo--header { height: 72px; width: auto; flex-shrink: 0; }
+.logo--footer { height: 160px; width: auto; }
 
-.badge {
-  display:inline-block;
-  padding:.25rem .5rem;
-  border-radius:.5rem;
-  background:#eef2ff;
-  color:#3730a3;
-  font-size:.75rem;
-  font-weight:600;
-}
-
-/* ------------------- HERO PRINCIPAL ------------------- */
-.hero {
+/* ------------------- BOTONES ------------------- */
+.btn {
+  display: inline-block;
+  background: var(--blue); /* ✅ corregido: antes estaba var (--bg) */
   color: #fff;
-  background: linear-gradient(180deg, var(--blue), var(--teal));
-  height: 600px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  position: relative;      
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+}
+.btn:hover { background: #274aa7; text-decoration: none; }
+
+.btn-cita {
+  background-color: var(--blue);
+  color: #fff !important;
+  font-weight: 600;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  text-decoration: none !important;
+  transition: background-color .2s ease, transform .2s ease;
+  white-space: nowrap;
+}
+.btn-cita:hover {
+  background-color: var(--teal);
+  transform: scale(1.05);
+  color: #fff;
 }
 
-.logo-eslogan {
-  position: absolute;
-  top: 130px;
-  left: 18%;                   
-  width: 500px;                
-  max-width: 600px;
-  height: auto;
-  margin: 0;                   
-  border-radius: 1rem;
-  border: none;
-  box-shadow: none;
-  pointer-events: none; /* evita clics encima */
-  margin-left: -250px;
-  margin-top: -100px;
-}
-
-/* ------------------- GRIDS Y UTILIDADES ------------------- */
+/* ------------------- UTILIDADES / GRIDS ------------------- */
 .grid { display: grid; gap: 1rem; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-.grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.grid-3 { grid-template-columns: 1fr; } /* mobile */
 .grid-md-2 { grid-template-columns: 1fr; }
+
 @media (min-width: 768px) {
+  .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
   .grid-md-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 
@@ -136,89 +129,119 @@ a:hover { text-decoration: underline; }
 .section { padding: 3rem 0; }
 .muted { color: var(--muted); }
 
-.btn {
-  display:inline-block;
-  background: var (--bg);
-  color:#fff;
-  padding:.6rem 1rem;
-  border-radius:.5rem;
-}
-.btn:hover { background:#274aa7; text-decoration:none; }
-
-/* ------------------- FOOTER ------------------- */
-.footer {
-  color:#fff;
-  background: linear-gradient(180deg, var(--blue), var(--teal));
-  padding: 2rem 0;
-  margin-top: 2rem;
-}
-.footer a { color: #d1fae5; }
-
 img.round { border-radius: 50%; }
 img.cover { width:100%; height:100%; object-fit:cover; }
-
 hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 .hidden { display: none; }
+
+/* ------------------- MENÚ RESPONSIVE ------------------- */
+/* Desktop nav visible >=768px */
 .show-md { display: none; }
 @media (min-width: 768px) { .show-md { display: inline-flex; } }
 
+/* Botón hamburguesa visible en móvil, oculto en desktop */
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: .75rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .menu-btn { display: none; }
+}
+
+/* Panel móvil: se muestra/oculta con .hidden desde JS */
+#mobilePanel {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+#mobilePanel a { padding: .6rem .25rem; }
+
 /* ------------------- DROPDOWN "SERVICIOS" ------------------- */
-.dropdown { position: relative; }
+.dropdown { position: relative; display: inline-flex; align-items: center; }
 .dropdown-menu {
   position:absolute;
   top:100%;
   left:0;
-  background: var(--bg);
-  border:1px solid var(--bg);
-  border-radius:.5rem;
+  background: #fff;              /* ✅ más legible */
+  border:1px solid #e5e7eb;
+  border-radius:.75rem;
   min-width:180px;
-  box-shadow:0 8px 24px rgba(0,0,0,.15);
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
   z-index: 1000;
+  padding: .35rem;
 }
 .dropdown-menu a {
   display:block;
-  padding:.5rem .75rem;
-  color:var(--bg);
-  background: transparent;
+  padding:.55rem .75rem;
+  color: var(--text);            /* ✅ antes era var(--bg) y no se veía */
+  border-radius: .5rem;
   text-decoration: none;
 }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a:active {
-  background:#274aa7;
-  color:#d1fae5;
+  background:#eef2ff;
+  color: var(--blue);
   outline: none;
 }
 
-/* ========================================================= */
-/* ========== HERO ANIMADO: imagen rotando + texto ========== */
-/* ========================================================= */
-
-
-.hero-visual { 
-  position: relative; 
-  width: 185%;                 
-  aspect-ratio: 16 / 9;        
-  height: auto;                
-  border-radius: 1rem; 
-  overflow: hidden; 
-  box-shadow: 0 2px 8px rgba(0,0,0,.08); 
-  margin-left: -270px;              
+/* Alinear el botón "Servicios" con el resto */
+.header-main .nav a,
+.header-main .nav .dropdown {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
 }
 
+/* ------------------- HERO PRINCIPAL ------------------- */
+.hero {
+  color: #fff;
+  background: linear-gradient(180deg, var(--blue), var(--teal));
+  min-height: 520px;             /* mobile */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-eslogan {
+  position: absolute;
+  top: 110px;
+  left: 12px;
+  width: min(520px, 92vw);
+  height: auto;
+  margin: 0;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* Hero visual (mobile-first) */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
 .hero-visual img {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
   display: block;
-  object-fit: cover;           
-  object-position: center;     
-  margin: 0 !important;
-  max-width: none !important; 
+  object-fit: cover;
+  object-position: center;
 }
 
-.hero-visual img, 
-.hero-visual .logopedia-inicio {all: unset;}
-
+/* Texto sobre el carrusel */
 .hero-caption {
   position: absolute;
   inset: 0;
@@ -233,6 +256,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
 }
 
+/* Animaciones */
 @keyframes slideInLeft {
   from { opacity: 0; transform: translateX(-28px); }
   to   { opacity: 1; transform: translateX(0); }
@@ -251,46 +275,30 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   }
 }
 
-/* ========================================================= */
-/* ========== ABOUT: Misión/Visión/Valores en CUADROS ======= */
-/* ========================================================= */
-
+/* ------------------- ABOUT: CUADROS M/V/VALORES ------------------- */
 .about-grid {
   display: grid;
   gap: 2rem;
 }
-.values-list {
-  position: relative; /* activa desplazamiento local */
-  left: 120px;         /* mueve todo 40px a la derecha */
-  list-style-position: inside;
-  padding-left: 0;
-  margin: 0;
-}
 @media (min-width: 768px) {
   .about-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-/* usamos las .card existentes como “cuadrados” */
-.info-block h3{ margin-top: 3.5rem; }
-
-/* Valores ocupa todo el ancho y es un poco más grande */
 .card--wide {
   grid-column: 1 / -1;
-  padding: 1.5rem;             /* un poco más amplio */
+  padding: 1.5rem;
 }
 
 .block-icon {
-  width: 130px;          /* cajón uniforme */
+  width: 130px;
   height: 130px;
-  margin: 0 auto 1rem;   /* centra el cajón dentro de la card */
-  display: grid;         /* centra el contenido */
-  place-items: center;   /* centro horizontal y vertical */
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
 }
-
 .block-icon img {
   max-width: 100% !important;
   max-height: 100% !important;
-  width: auto !important;      /* evita el 150% heredado */
+  width: auto !important;
   height: auto !important;
   object-fit: contain;
   display: block;
@@ -300,11 +308,6 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   width: 110px !important;
   height: auto !important;
 }
-
-/* Colores del aro */
-.ring-blue   { --ring-color: var(--blue); }
-.ring-teal   { --ring-color: var(--teal); }
-.ring-yellow { --ring-color: #facc15; }   /* amarillo suave */
 
 /* Lista de valores con espaciado limpio */
 .values-list {
@@ -318,68 +321,73 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 .values-list strong { color: var(--blue); }
 
 .about-title {
-  color: #1e3a8a;        
-  border-radius: 0.5rem;     
-}
-.hero-psicologia {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0;
-  z-index: 0;          /* queda detrás del texto */
+  color: #1e3a8a;
+  border-radius: 0.5rem;
 }
 
+/* ------------------- HERO SERVICIOS (LOGOPEDIA / PSICOLOGÍA) ------------------- */
+.hero-psicologia,
 .hero-logopedia {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 0;
-  z-index: 0;          /* queda detrás del texto */
+  z-index: 0;
 }
 
-.section--compact1 {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  margin-top: 0;
-}
-
-.section--compact2 {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  margin-top: 0;
-}
+/* Compact sections */
+.section--compact1,
+.section--compact2,
 .section--compact3 {
   padding-top: 4rem;
   padding-bottom: 2rem;
   margin-top: 0;
 }
 
-/* ===== Botón verde menta del menú ===== */
-.btn-cita {
-  background-color: var(--blue); 
-  color: #fff !important;      
-  font-weight: 600;              
-  padding: .6rem 1rem;           
-  border-radius: .5rem;          
-  text-decoration: none !important;
-  transition: background-color .2s ease, transform .2s ease;
-  white-space: nowrap;
+/* ------------------- FOOTER ------------------- */
+.footer {
+  color:#fff;
+  background: linear-gradient(180deg, var(--blue), var(--teal));
+  padding: 2rem 0;
+  margin-top: 2rem;
 }
+.footer a { color: #d1fae5; }
 
-.btn-cita:hover {
-  background-color: var(--teal); /* color más oscuro al pasar el mouse */
-  transform: scale(1.05);    /* efecto de “crecer” un poco */
-  color: #fff;
+/* ========================================================= */
+/* ====== AJUSTES SOLO PARA PANTALLAS GRANDES (TU PC) ======= */
+/* ========================================================= */
+@media (min-width: 1024px) {
+  /* Mantengo tus ajustes originales para PC */
+  .header-top { margin-left: -250px; }
+
+  .header-main {
+    height: 150px;
+  }
+
+  .nav nav { margin-left: 27rem; } /* tu ajuste original */
+
+  .logo--header { height: 250px; margin-left: -150px; }
+  .logo--footer { height: 400px; margin-right: 200px; }
+
+  .hero { height: 600px; min-height: 600px; }
+
+  .logo-eslogan {
+    top: 130px;
+    left: 18%;
+    width: 500px;
+    max-width: 600px;
+    margin-left: -250px;
+    margin-top: -100px;
+  }
+
+  .hero-visual {
+    width: 185%;
+    margin-left: -270px;
+  }
+
+  /* Baja un pelín todo el botón "Servicios" */
+  .header-main .nav .dropdown { transform: translateY(1px); }
 }
-
-
-
-
