@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Nosotros – Cognivox Group</title>
+  <meta name="description" content="Conoce Cognivox Group: un enfoque integral en logopedia y psicología para fortalecer el bienestar comunicativo y emocional." />
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -11,31 +14,37 @@
   <!-- Header -->
   <header class="header-main">
     <div class="container nav">
-      <a href="./index.html">
+      <a href="./index.html" aria-label="Ir a inicio">
         <img src="./images/inicio/logo-empresa.png" alt="Logo Cognivox Group" class="logo--header"
+             loading="eager" decoding="async"
              onerror="this.src='https://via.placeholder.com/160x64?text=Logo';" />
       </a>
-      <nav class="show-md" style="gap:.25rem;">
+
+      <nav class="show-md" style="gap:.25rem;" aria-label="Navegación principal">
         <a href="./index.html">Inicio</a>
-        <a href="./about.html" class="active">Nosotros</a>
+        <a href="./about.html" class="active" aria-current="page">Nosotros</a>
+
         <span class="dropdown" id="services">
-          <a href="#" id="servicesToggle" aria-haspopup="true">Servicios▾</a>
-          <span class="dropdown-menu hidden" id="servicesMenu">
-            <a href="./services/logopedia.html">Logopedia</a>
-            <a href="./services/psicologia.html">Psicología</a>
+          <a href="#" id="servicesToggle" aria-haspopup="true" aria-expanded="false">Servicios▾</a>
+          <span class="dropdown-menu hidden" id="servicesMenu" role="menu" aria-label="Servicios">
+            <a href="./services/logopedia.html" role="menuitem">Logopedia</a>
+            <a href="./services/psicologia.html" role="menuitem">Psicología</a>
           </span>
         </span>
+
         <a href="./blog.html">Blog</a>
         <a href="./events.html">Eventos</a>
         <a href="./multimedia.html">Multimedia</a>
         <a href="./contact.html" class="btn-cita">Agende su cita</a>
       </nav>
-      <button id="menuBtn" class="menu-btn" aria-label="Menú">☰</button>
+
+      <button id="menuBtn" class="menu-btn" aria-label="Abrir menú" aria-controls="mobilePanel" aria-expanded="false">☰</button>
     </div>
-    <div id="mobilePanel" class="hidden">
+
+    <div id="mobilePanel" class="hidden" aria-label="Menú móvil">
       <div class="container" style="display:grid;gap:.5rem;">
         <a href="./index.html">Inicio</a>
-        <a href="./about.html">Nosotros</a>
+        <a href="./about.html" aria-current="page">Nosotros</a>
         <a href="./services/logopedia.html">Logopedia</a>
         <a href="./services/psicologia.html">Psicología</a>
         <a href="./blog.html">Blog</a>
@@ -46,108 +55,131 @@
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="about-title">
-        <h1>Logopedia MindCare</h1>
-    </div>
-      <p>En Cognivox Group creemos que la mente y el lenguaje son los pilares de la conexión humana.</p>
-      <p>Por eso, combinamos la logopedia y la psicología para acompañar a las personas en su desarrollo comunicativo, emocional y personal, desde una mirada científica, humana y esperanzadora.</p>
-      <p>Nuestro propósito es ayudar a cada individuo a expresarse con libertad y vivir con equilibrio, fortaleciendo la voz, el pensamiento y las emociones que dan forma a su bienestar.</p>
-      <p>Acompañamos a niños, adolescentes y adultos con programas terapéuticos diseñados para potenciar sus habilidades, superar dificultades y reconectar con su entorno desde la confianza y la empatía.</p>
-      <p>En Cognivox Group entendemos que comunicar también es sanar, y que cuidar la mente es cuidar la forma en que nos relacionamos con el mundo.</p>
-      <p>Cada palabra, cada emoción y cada sonrisa son parte de un proceso de crecimiento integral, donde cuerpo, mente y lenguaje se armonizan para transformar vidas.</p>
+  <main id="contenido">
+    <section class="section">
+      <div class="container">
 
-      <!-- === Misión, Visión (arriba) y Valores (abajo) conservando CUADROS === -->
-      <div class="about-grid" style="margin:2rem 0;">
-        <!-- Misión (cuadro) -->
-        <article class="card info-block">
-          <div class="block-icon ring-blue" aria-hidden="true">
-            <img src="./images/about/Mision.png" alt="Ícono Misión" class="MisionPNG"/>
+        <div class="about-title">
+          <h1>Cognivox Group</h1>
+        </div>
+
+        <p>En Cognivox Group creemos que la mente y el lenguaje son los pilares de la conexión humana.</p>
+        <p>Por eso, combinamos la logopedia y la psicología para acompañar a las personas en su desarrollo comunicativo, emocional y personal, desde una mirada científica, humana y esperanzadora.</p>
+        <p>Nuestro propósito es ayudar a cada individuo a expresarse con libertad y vivir con equilibrio, fortaleciendo la voz, el pensamiento y las emociones que dan forma a su bienestar.</p>
+        <p>Acompañamos a niños, adolescentes y adultos con programas terapéuticos diseñados para potenciar sus habilidades, superar dificultades y reconectar con su entorno desde la confianza y la empatía.</p>
+        <p>En Cognivox Group entendemos que comunicar también es sanar, y que cuidar la mente es cuidar la forma en que nos relacionamos con el mundo.</p>
+        <p>Cada palabra, cada emoción y cada sonrisa son parte de un proceso de crecimiento integral, donde cuerpo, mente y lenguaje se armonizan para transformar vidas.</p>
+
+        <!-- === Misión, Visión (arriba) y Valores (abajo) conservando CUADROS === -->
+        <div class="about-grid" style="margin:2rem 0;">
+
+          <!-- Misión -->
+          <article class="card info-block">
+            <div class="block-icon ring-blue" aria-hidden="true">
+              <img src="./images/about/Mision.png" alt="Ícono de Misión" class="MisionPNG"
+                   loading="lazy" decoding="async"
+                   onerror="this.src='https://via.placeholder.com/96?text=Misi%C3%B3n';" />
+            </div>
+            <h3 class="sr-only">Misión</h3>
+            <p>
+              Brindar atención integral en logopedia y psicología, promoviendo el desarrollo
+              comunicativo, emocional y personal de niños, adolescentes y adultos. Nos comprometemos
+              a acompañar cada proceso con empatía, profesionalismo y evidencia científica, ayudando
+              a las personas a encontrar su voz, cuidar su mente y construir bienestar desde la conexión humana.
+            </p>
+          </article>
+
+          <!-- Visión -->
+          <article class="card info-block">
+            <div class="block-icon ring-teal" aria-hidden="true">
+              <img src="./images/about/Vision.png" alt="Ícono de Visión" class="VisionPNG"
+                   loading="lazy" decoding="async"
+                   onerror="this.src='https://via.placeholder.com/96?text=Visi%C3%B3n';" />
+            </div>
+            <h3 class="sr-only">Visión</h3>
+            <p>
+              Ser un centro de referencia nacional e internacional en la atención logopédica y psicológica,
+              reconocido por su excelencia profesional, su innovación terapéutica y su humanización del cuidado.
+              Aspiramos a transformar vidas fortaleciendo la comunicación, la salud mental y el equilibrio
+              emocional como pilares del desarrollo humano.
+            </p>
+          </article>
+
+          <!-- Valores -->
+          <article class="card info-block card--wide">
+            <div class="block-icon ring-yellow" aria-hidden="true">
+              <img src="./images/about/Valores.png" alt="Ícono de Valores" class="ValoresPNG"
+                   loading="lazy" decoding="async"
+                   onerror="this.src='https://via.placeholder.com/96?text=Valores';" />
+            </div>
+            <h3 class="sr-only">Valores</h3>
+            <ul class="values-list">
+              <li><strong>Empatía:</strong> escuchamos y comprendemos las historias detrás de cada voz y emoción.</li>
+              <li><strong>Profesionalismo:</strong> actuamos con ética, rigor científico y compromiso con la calidad del servicio.</li>
+              <li><strong>Humanización:</strong> ponemos a la persona en el centro de cada proceso terapéutico.</li>
+              <li><strong>Innovación:</strong> incorporamos estrategias terapéuticas y recursos tecnológicos actualizados.</li>
+              <li><strong>Trabajo interdisciplinario:</strong> integramos la logopedia y la psicología en un mismo camino de bienestar.</li>
+              <li><strong>Confidencialidad:</strong> garantizamos un entorno seguro, de respeto y confianza.</li>
+              <li><strong>Esperanza:</strong> creemos en el poder de cada palabra, emoción y pensamiento para transformar vidas.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h2>Nuestro equipo</h2>
+        <div class="grid grid-3" style="margin-top:1rem;">
+          <div class="card" style="text-align:center;">
+            <img src="./images/sobre-nosotros/team-ana-perez.jpg" alt="Ana Pérez" class="round" width="128" height="128"
+                 loading="lazy" decoding="async"
+                 onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
+            <h4>Ana Pérez</h4><p class="muted">Logopeda pediátrica</p>
           </div>
-          <h3></h3>
-          <p>
-            Brindar atención integral en logopedia y psicología, promoviendo el desarrollo
-            comunicativo, emocional y personal de niños, adolescentes y adultos. Nos comprometemos
-            a acompañar cada proceso con empatía, profesionalismo y evidencia científica, ayudando
-            a las personas a encontrar su voz, cuidar su mente y construir bienestar desde la conexión humana.
-          </p>
-        </article>
 
-        <!-- Visión (cuadro) -->
-        <article class="card info-block">
-          <div class="block-icon ring-teal" aria-hidden="true">
-            <img src="./images/about/Vision.png" alt="Ícono Visión" class="VisionPNG"/>
+          <div class="card" style="text-align:center;">
+            <img src="./images/sobre-nosotros/team-carlos-gomez.jpg" alt="Carlos Gómez" class="round" width="128" height="128"
+                 loading="lazy" decoding="async"
+                 onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
+            <h4>Carlos Gómez</h4><p class="muted">Psicólogo clínico</p>
           </div>
-          <h3></h3>
-          <p>
-            Ser un centro de referencia nacional e internacional en la atención logopédica y psicológica,
-            reconocido por su excelencia profesional, su innovación terapéutica y su humanización del cuidado.
-            Aspiramos a transformar vidas fortaleciendo la comunicación, la salud mental y el equilibrio
-            emocional como pilares del desarrollo humano.
-          </p>
-        </article>
 
-        <!-- Valores (abajo, cuadro MÁS GRANDE) -->
-        <article class="card info-block card--wide">
-          <div class="block-icon ring-yellow" aria-hidden="true">
-            <img src="./images/about/Valores.png" alt="Ícono Valores" class="ValoresPNG"/>
+          <div class="card" style="text-align:center;">
+            <img src="./images/sobre-nosotros/team-lucia-fernandez.jpg" alt="Lucía Fernández" class="round" width="128" height="128"
+                 loading="lazy" decoding="async"
+                 onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
+            <h4>Lucía Fernández</h4><p class="muted">Especialista en voz</p>
           </div>
-          <ul class="values-list">
-            <li><strong>Empatía:</strong> escuchamos y comprendemos las historias detrás de cada voz y emoción.</li>
-            <li><strong>Profesionalismo:</strong> Actuamos con ética, rigor científico y compromiso con la calidad del servicio.</li>
-            <li><strong>Humanización:</strong> Ponemos a la persona en el centro de cada proceso terapéutico.</li>
-            <li><strong>Innovación:</strong> Incorporamos estrategias terapéuticas y recursos tecnológicos actualizados.</li>
-            <li><strong>Trabajo interdisciplinario:</strong> Integramos la logopedia y la psicología en un mismo camino de bienestar.</li>
-            <li><strong>Confidencialidad:</strong> Garantizamos un entorno seguro, de respeto y confianza.</li>
-            <li><strong>Esperanza:</strong> Creemos en el poder de cada palabra, emoción y pensamiento para transformar vidas.</li>
-          </ul>
-        </article>
-      </div>
 
-      <h2>Nuestro equipo</h2>
-      <div class="grid grid-3" style="margin-top:1rem;">
-        <div class="card" style="text-align:center;">
-          <img src="./images/sobre-nosotros/team-ana-perez.jpg" alt="Ana Pérez" class="round" width="128" height="128"
-               onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
-          <h4>Ana Pérez</h4><p class="muted">Logopeda Pediátrica</p>
+          <div class="card" style="text-align:center;">
+            <img src="./images/sobre-nosotros/team-javier-martinez.jpg" alt="Javier Martínez" class="round" width="128" height="128"
+                 loading="lazy" decoding="async"
+                 onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
+            <h4>Javier Martínez</h4><p class="muted">Terapeuta familiar</p>
+          </div>
         </div>
-        <div class="card" style="text-align:center;">
-          <img src="./images/sobre-nosotros/team-carlos-gomez.jpg" alt="Carlos Gómez" class="round" width="128" height="128"
-               onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
-          <h4>Carlos Gómez</h4><p class="muted">Psicólogo Clínico</p>
-        </div>
-        <div class="card" style="text-align:center;">
-          <img src="./images/sobre-nosotros/team-lucia-fernandez.jpg" alt="Lucía Fernández" class="round" width="128" height="128"
-               onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
-          <h4>Lucía Fernández</h4><p class="muted">Especialista en Voz</p>
-        </div>
-        <div class="card" style="text-align:center;">
-          <img src="./images/sobre-nosotros/team-javier-martinez.jpg" alt="Javier Martínez" class="round" width="128" height="128"
-               onerror="this.src='https://via.placeholder.com/128?text=Foto';" />
-          <h4>Javier Martínez</h4><p class="muted">Terapeuta Familiar</p>
-        </div>
-      </div>
 
-      <h2 style="margin-top:2rem;">Instalaciones</h2>
-      <div class="grid grid-3" style="margin-top:1rem;">
-        <img class="card cover" src="./images/sobre-nosotros/facility-1.jpg" alt="Sala de espera"
-             onerror="this.src='https://via.placeholder.com/800x400?text=Instalaciones';" />
-        <img class="card cover" src="./images/sobre-nosotros/facility-2.jpg" alt="Consultorio de logopedia"
-             onerror="this.src='https://via.placeholder.com/800x400?text=Instalaciones';" />
-        <img class="card cover" src="./images/sobre-nosotros/facility-3.jpg" alt="Sala de terapia infantil"
-             onerror="this.src='https://via.placeholder.com/800x400?text=Instalaciones';" />
+        <h2 style="margin-top:2rem;">Instalaciones</h2>
+        <div class="grid grid-3" style="margin-top:1rem;">
+          <img class="card cover" src="./images/sobre-nosotros/facility-1.jpg" alt="Sala de espera"
+               loading="lazy" decoding="async"
+               onerror="this.src='https://via.placeholder.com/800x400?text=Instalaciones';" />
+          <img class="card cover" src="./images/sobre-nosotros/facility-2.jpg" alt="Consultorio de logopedia"
+               loading="lazy" decoding="async"
+               onerror="this.src='https://via.placeholder.com/800x400?text=Instalaciones';" />
+          <img class="card cover" src="./images/sobre-nosotros/facility-3.jpg" alt="Sala de terapia infantil"
+               loading="lazy" decoding="async"
+               onerror="this.src='https://via.placeholder.com/800x400?text=Instalaciones';" />
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container grid grid-md-2" style="gap:2rem;">
       <div>
         <img src="./images/inicio/Logo-empresa-footer.png" alt="Logo Cognivox Group" class="logo logo--footer"
+             loading="lazy" decoding="async"
              onerror="this.src='https://via.placeholder.com/160x56?text=Logo';" />
-       
       </div>
       <div>
         <h4>Contacto</h4>
@@ -163,15 +195,3 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
