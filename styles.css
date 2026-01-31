@@ -1,28 +1,11 @@
-:root{
-  /* Marca (azul más suave que el actual) */
-  --blue: #2B4C9A;
-  --blue-deep: #1F3C88;
-  --soft-blue: #EEF3FF;
-
-  /* Acentos */
-  --teal: #1C8A84;
-  --yellow: #E7C873;
-  --pink: #E98AA6;
-
-  /* Neutros cálidos */
-  --bg: #F7F3EB;
-  --surface: #FFFFFF;
-  --text: #1F2937;
-  --muted: #6B7280;
-  --border: #E6E0D6;
-
-  --blue-dark: #1E3A8A;   /* base fuerte */
-  --blue-mid:  #2B6CB0;   /* transición */
-  --soft-warm: #E9D8A6;   /* amarillo muy suave */
-
+:root {
+  --blue: #1e3a8a;    /* azul profundo */
+  --teal: #0f766e;    /* teal / verde menta */
+  --text: #1f2937;    /* gris oscuro */
+  --muted: #6b7280;   /* gris medio */
+  --bg: #F8F6F2;      /* beige claro */
   --max: 1100px;
 }
-
 
 /* ------------------- ESTILOS BASE ------------------- */
 * { box-sizing: border-box; }
@@ -31,7 +14,6 @@ html, body {
   padding: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: var(--bg);
 }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -76,7 +58,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   border-bottom: 5px solid #e5e7eb;
   z-index: 10;
-  background: #1E3A8A;
+  background: var(--blue);
   height: 92px;
   display: flex;
   align-items: center;
@@ -87,22 +69,16 @@ a:hover { text-decoration: underline; }
 .nav nav { margin-left: 0; }
 .nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
-
-/* Links principales del header (Inicio, Eventos, Blog, etc.) */
-.header-main .nav nav > a:not(.btn-cita){
+/* Links */
+/* ===== Links del HEADER (blancos) ===== */
+.header-main .nav a{
   color: #fff;
 }
 
-/* Botón/toggle "Servicios" (blanco también) */
-.header-main #servicesToggle{
+/* Hover/Active del header */
+.header-main .nav a:hover,
+.header-main .nav a.active{
   color: #fff;
-}
-
-/* Hover/Active */
-.header-main .nav nav > a:not(.btn-cita):hover,
-.header-main .nav nav > a:not(.btn-cita).active,
-.header-main #servicesToggle:hover{
-  color: #E9D8A6; /* amarillo suave */
   text-decoration: underline;
 }
 
@@ -135,22 +111,22 @@ a:hover { text-decoration: underline; }
 }
 .btn:hover { background: #274aa7; text-decoration: none; }
 
-.btn-cita{
-  background-color: var(--yellow);
-  color: #1F2937 !important;
-  font-weight: 700;
+.btn-cita {
+  background-color: #3b82f6;
+  color: #fff !important;
+  font-weight: 600;
   padding: .6rem 1rem;
   border-radius: .5rem;
   text-decoration: none !important;
   transition: background-color .2s ease, transform .2s ease;
   white-space: nowrap;
-  border: 1px solid var(--border);
 }
-.btn-cita:hover{
-  background-color: var(--pink);
+.btn-cita:hover {
+  background-color: var(--teal);
   transform: scale(1.05);
-  color: #1F2937 !important;
+  color: #fff;
 }
+
 /* ------------------- UTILIDADES / GRIDS ------------------- */
 .grid { display: grid; gap: 1rem; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -165,7 +141,7 @@ a:hover { text-decoration: underline; }
 /* Tarjetas y secciones */
 .card {
   background:#fff;
-  border: 1px solid var(--border);
+  border:1px solid #e5e7eb;
   border-radius:1rem;
   padding:1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
@@ -245,65 +221,44 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
 /* ------------------- HERO PRINCIPAL ------------------- */
 .hero {
-  color: var(--text);
-  background: var(--soft-blue);
-  min-height: 520px;
+  color: #fff;
+  background: var(--blue);
+  min-height: 520px;             /* mobile */
   display: flex;
   align-items: center;
   overflow: hidden;
   position: relative;
 }
 
-/* ===== HERO del index: que el carrusel llene el área ===== */
-
-/* En el index tu contenedor tiene: .hero-visual hero-visual--shift */
-.hero-visual{
-  position: relative;
-  width: 100%;
-  height: clamp(260px, 42vw, 520px); /* el alto del carrusel */
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-
-/* ===== HERO del index: carrusel limpio (imagen y texto a full) ===== */
-.hero-visual{
-  position: relative;
-  width: 100%;
-  height: clamp(260px, 42vw, 520px);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  background: #0b1220; /* si la imagen falla, igual ves el "marco" */
-}
-
-/* Imagen del carrusel: SIEMPRE llena el contenedor */
-#heroSlide{
+.logo-eslogan {
   position: absolute;
-  inset: 0;
+  top: 110px;
+  left: 12px;
+  width: min(520px, 92vw);
+  height: auto;
+  margin: 0;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* Hero visual (mobile-first) */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.hero-visual img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
   object-position: center;
-  z-index: 1;
-}
-
-/* Texto del carrusel encima de la imagen */
-#heroCaption{
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 0 1rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #fff;
-  font-size: clamp(1.4rem, 4.2vw, 2.2rem);
-  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
 }
 
 /* Texto sobre el carrusel */
@@ -413,30 +368,18 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 }
 
 /* ------------------- FOOTER ------------------- */
-.footer{
-  color: #1F2937;
-  background: linear-gradient(
-  180deg,
-  #1E3A8A 0%,
-  #2B6CB0 55%,
-  #E9D8A6 100%
-);
-
+.footer {
+  color:#fff;
+  background: var(--blue);
   padding: 2rem 0;
   margin-top: 2rem;
 }
-
-.footer a{
-  color: var(--blue);
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
+.footer a { color: #d1fae5; }
 
 /* ========================================================= */
 /* ====== AJUSTES SOLO PARA PANTALLAS GRANDES (TU PC) ======= */
 /* ========================================================= */
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   /* Mantengo tus ajustes originales para PC */
   .header-top { margin-left: -250px; }
 
@@ -451,27 +394,20 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
   .hero { height: 600px; min-height: 600px; }
 
+  .logo-eslogan {
+    top: 130px;
+    left: 18%;
+    width: 500px;
+    max-width: 600px;
+    margin-left: -250px;
+    margin-top: -100px;
+  }
+
+  .hero-visual {
+    width: 185%;
+    margin-left: -270px;
+  }
+
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
-}
-
-/* ===== PARCHE DIAGNOSTICO HERO (si no ves esto, styles.css NO está cargando) ===== */
-.hero-visual{
-  outline: 4px solid #ff00ff !important; /* borde fucsia visible */
-  background: #111827 !important;        /* fondo oscuro para ver el caption */
-  height: clamp(260px, 42vw, 520px) !important;
-}
-
-#heroCaption{
-  color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0,0,0,.8) !important;
-  font-size: clamp(1.6rem, 4.6vw, 2.6rem) !important;
-  background: rgba(0,0,0,.35) !important;
-}
-
-#heroSlide{
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
 }
