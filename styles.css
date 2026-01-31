@@ -15,7 +15,9 @@
   --text: #1F2937;
   --muted: #6B7280;
   --border: #E6E0D6;
-
+  --header-bg: #F4DFA6; /* amarillo suave (no chillón) */
+  --footer-bg: #E9A2B8; /* rosado suave */
+  
   --max: 1100px;
 }
 
@@ -72,7 +74,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   border-bottom: 5px solid #e5e7eb;
   z-index: 10;
-  background: var(--blue);
+  background: var(--header-bg);
   height: 92px;
   display: flex;
   align-items: center;
@@ -383,13 +385,15 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
 /* ------------------- FOOTER ------------------- */
 .footer{
-  color:#fff;
-  background: var(--blue-deep);
+  color: #1F2937;
+  background: var(--footer-bg);
   padding: 2rem 0;
   margin-top: 2rem;
 }
+
 .footer a{
-  color: var(--bg);
+  color: var(--blue);
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -429,20 +433,3 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
