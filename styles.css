@@ -87,16 +87,22 @@ a:hover { text-decoration: underline; }
 .nav nav { margin-left: 0; }
 .nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
-/* Links */
-/* ===== Links del HEADER (blancos) ===== */
-.header-main .nav a{
-  color: var(--soft-warm);
+
+/* Links principales del header (Inicio, Eventos, Blog, etc.) */
+.header-main .nav nav > a:not(.btn-cita){
+  color: #fff;
 }
 
-/* Hover/Active del header */
-.header-main .nav a:hover,
-.header-main .nav a.active{
-  color: #E9A2B8;
+/* Botón/toggle "Servicios" (blanco también) */
+.header-main #servicesToggle{
+  color: #fff;
+}
+
+/* Hover/Active */
+.header-main .nav nav > a:not(.btn-cita):hover,
+.header-main .nav nav > a:not(.btn-cita).active,
+.header-main #servicesToggle:hover{
+  color: #E9D8A6; /* amarillo suave */
   text-decoration: underline;
 }
 
@@ -273,22 +279,35 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* Imagen del carrusel (index) — ocupa el 100% del contenedor */
-.hero-visual > #heroSlide{
+/* ===== HERO del index: carrusel limpio (imagen y texto a full) ===== */
+.hero-visual{
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 42vw, 520px);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  background: #0b1220; /* si la imagen falla, igual ves el "marco" */
+}
+
+/* Imagen del carrusel: SIEMPRE llena el contenedor */
+#heroSlide{
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
   object-position: center;
-  display: block;
+  z-index: 1;
 }
 
-/* Opcional: si "hero-visual--shift" te desplaza el carrusel raro, lo neutralizamos */
-.hero-visual--shift{
-  margin-left: 0;
+/* Texto del carrusel encima de la imagen */
+#heroCaption{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
-
 
 /* Texto sobre el carrusel */
 .hero-caption {
@@ -444,14 +463,10 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
     margin-top: -100px;
   }
 
-  .hero-visual {
-    width: 100%;
-    margin-left: 0;
-  }
-
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
