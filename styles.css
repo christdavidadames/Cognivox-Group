@@ -70,7 +70,7 @@ a:hover { text-decoration: underline; }
 .nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
 /* Links */
-.header-main .nav a { color: #fff; }
+.header-main .nav a { color: #ffffff; }
 .header-main .nav a.active,
 .header-main .nav a:hover {
   color: var(--blue);
@@ -202,7 +202,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 /* ------------------- HERO PRINCIPAL ------------------- */
 .hero {
   color: #fff;
-  background: linear-gradient(180deg, var(--blue), var(--teal));
+  background: var(--blue);
   min-height: 520px;             /* mobile */
   display: flex;
   align-items: center;
@@ -350,7 +350,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 /* ------------------- FOOTER ------------------- */
 .footer {
   color:#fff;
-  background: linear-gradient(180deg, var(--blue), var(--teal));
+  background: var(--blue);
   padding: 2rem 0;
   margin-top: 2rem;
 }
@@ -392,6 +392,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
