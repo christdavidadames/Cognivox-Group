@@ -70,7 +70,7 @@ a:hover { text-decoration: underline; }
 .nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
 /* Links */
-.header-main .nav a { color: #ffffff; }
+.header-main .nav > a { color: #ffffff; }
 .header-main .nav a.active,
 .header-main .nav a:hover {
   color: #ffffff;
@@ -392,6 +392,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
