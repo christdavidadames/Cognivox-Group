@@ -56,6 +56,7 @@ a:hover { text-decoration: underline; }
 .header-main {
   position: sticky;
   top: 0;
+  border-bottom: 5px solid #e5e7eb;
   z-index: 10;
   background: var(--blue);
   height: 92px;
@@ -178,7 +179,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 .dropdown-menu a {
   display:block;
   padding:.55rem .75rem;
-  color: var(--text);            /* ✅ antes era var(--bg) y no se veía */
+  color: var(--blue);            /* ✅ antes era var(--bg) y no se veía */
   border-radius: .5rem;
   text-decoration: none;
 }
@@ -391,6 +392,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
