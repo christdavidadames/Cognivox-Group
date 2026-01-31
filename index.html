@@ -59,14 +59,15 @@
         <!-- Columna derecha: carrusel (ligeramente desplazado a la derecha) -->
         <div class="hero-right" aria-label="Carrusel principal">
           <div class="hero-visual hero-visual--shift is-animating">
-            <img
+           <img
               id="heroSlide"
               src="./images/inicio/logopedia-inicio-1.jpg"
               alt="Logopedia y psicología"
-              class="logopedia-inicio"
               loading="eager"
               decoding="async"
-            />
+              onerror="this.src='https://via.placeholder.com/1200x600/111827/FFFFFF?text=NO+CARGA+IMAGEN';"
+              />
+
             <div id="heroCaption" class="hero-caption is-animating" aria-live="polite">La vida</div>
           </div>
         </div>
@@ -131,5 +132,6 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
 
 
