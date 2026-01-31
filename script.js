@@ -118,17 +118,23 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add(className);
   }
 
-  function nextSlide() {
-    i = (i + 1) % slides.length;
-    imgEl.src = slides[i];
-    imgEl.alt = alts[i];
-    capEl.textContent = captions[i];
-    capEl.setAttribute('aria-label', captions[i]);
+function nextSlide() {
+  i = (i + 1) % slides.length;
+  imgEl.src = slides[i];
+  imgEl.alt = alts[i];
+  capEl.textContent = captions[i];
+  capEl.setAttribute('aria-label', captions[i]);
 
-    // Re-lanzar animaciones
-    animateOnce(imgEl.parentElement, 'is-animating'); // contenedor .hero-visual
-    animateOnce(capEl, 'is-animating');
-  }
+  // Re-lanzar animaciones
+  const wrap = imgEl.closest('.hero-visual');
+  if (wrap) animateOnce(wrap, 'is-animating');
+  animateOnce(capEl, 'is-animating');
+}
+
+// ✅ Si una imagen no carga, pasa al siguiente slide
+imgEl.addEventListener('error', () => {
+  nextSlide();
+});
 
   // Inicial coherente al cargar
   imgEl.src = slides[0];
@@ -143,3 +149,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cambio automático
   setInterval(nextSlide, DURATION);
 });
+
