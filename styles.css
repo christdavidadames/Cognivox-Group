@@ -370,7 +370,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   .nav nav { margin-left: 27rem; } /* tu ajuste original */
 
   .logo--header { height: 220px; margin-left: -200px; }
-  .logo--footer { height: 250px; margin-right: 300px; }
+  .logo--footer { height: 250px; margin-right: 500px; }
 
   .hero { height: 600px; min-height: 600px; }
 
@@ -391,6 +391,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
