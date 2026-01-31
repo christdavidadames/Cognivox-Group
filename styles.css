@@ -179,7 +179,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 .dropdown-menu a {
   display:block;
   padding:.55rem .75rem;
-  color: var(--blue);            /* ✅ antes era var(--bg) y no se veía */
+  color: var(--blue) !important;            /* ✅ antes era var(--bg) y no se veía */
   border-radius: .5rem;
   text-decoration: none;
 }
@@ -392,6 +392,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
