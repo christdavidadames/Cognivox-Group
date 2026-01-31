@@ -70,12 +70,32 @@ a:hover { text-decoration: underline; }
 .nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
 /* Links */
-.header-main .nav > a { color: #ffffff; }
-.header-main .nav a.active,
-.header-main .nav a:hover {
-  color: #ffffff;
+/* ===== Links del HEADER (blancos) ===== */
+.header-main .nav a{
+  color: #fff;
+}
+
+/* Hover/Active del header */
+.header-main .nav a:hover,
+.header-main .nav a.active{
+  color: #fff;
   text-decoration: underline;
 }
+
+/* ===== Links del DROPDOWN (azules) ===== */
+.header-main .dropdown-menu a{
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Hover/Focus del dropdown (fondo gris-azulado, texto azul) */
+.header-main .dropdown-menu a:hover,
+.header-main .dropdown-menu a:focus,
+.header-main .dropdown-menu a:active{
+  background: #eef2ff;
+  color: var(--blue);
+}
+
 
 /* Logo tamaños (mobile-first) */
 .logo--header { height: 72px; width: auto; flex-shrink: 0; }
@@ -364,8 +384,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   .header-top { margin-left: -250px; }
 
   .header-main {
-    color: var(--blue);
-    height: 150px;
+        height: 150px;
   }
 
   .nav nav { margin-left: 27rem; } /* tu ajuste original */
@@ -392,6 +411,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
