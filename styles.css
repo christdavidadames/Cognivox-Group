@@ -97,7 +97,7 @@ a:hover { text-decoration: underline; }
 /* Links */
 /* ===== Links del HEADER (blancos) ===== */
 .header-main .nav a{
-  color: var(--blue);
+  color: #fff;
 }
 
 /* Hover/Active del header */
@@ -268,23 +268,27 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   pointer-events: none;
 }
 
-/* Hero visual (mobile-first) */
-.hero-visual {
-  position: relative;
+/* ===== HERO del index: que el carrusel llene el área ===== */
+
+/* En el index tu contenedor tiene: .hero-visual hero-visual--shift */
+.hero-visual{
   width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  aspect-ratio: auto; /* quitamos el 16/9 para que pueda crecer */
+  height: clamp(260px, 42vw, 520px); /* alto responsivo */
 }
-.hero-visual img {
+
+/* La imagen ya tiene cover, esto la fuerza a ocupar todo el alto */
+.hero-visual img{
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
-  object-position: center;
 }
+
+/* Opcional: si "hero-visual--shift" te desplaza el carrusel raro, lo neutralizamos */
+.hero-visual--shift{
+  margin-left: 0;
+}
+
 
 /* Texto sobre el carrusel */
 .hero-caption {
@@ -448,5 +452,3 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
-
-
