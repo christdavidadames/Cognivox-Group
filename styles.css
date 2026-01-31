@@ -58,7 +58,6 @@ a:hover { text-decoration: underline; }
   top: 0;
   z-index: 10;
   background: var(--blue);
-  border-bottom: 10px solid #e5e7eb;
   height: 92px;
   display: flex;
   align-items: center;
@@ -392,6 +391,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
