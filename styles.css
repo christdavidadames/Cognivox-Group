@@ -1,11 +1,24 @@
-:root {
-  --blue: #1e3a8a;    /* azul profundo */
-  --teal: #0f766e;    /* teal / verde menta */
-  --text: #1f2937;    /* gris oscuro */
-  --muted: #6b7280;   /* gris medio */
-  --bg: #F8F6F2;      /* beige claro */
+:root{
+  /* Marca (azul más suave que el actual) */
+  --blue: #2B4C9A;
+  --blue-deep: #1F3C88;
+  --soft-blue: #EEF3FF;
+
+  /* Acentos */
+  --teal: #1C8A84;
+  --yellow: #E7C873;
+  --pink: #E98AA6;
+
+  /* Neutros cálidos */
+  --bg: #F7F3EB;
+  --surface: #FFFFFF;
+  --text: #1F2937;
+  --muted: #6B7280;
+  --border: #E6E0D6;
+
   --max: 1100px;
 }
+
 
 /* ------------------- ESTILOS BASE ------------------- */
 * { box-sizing: border-box; }
@@ -14,6 +27,7 @@ html, body {
   padding: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
+  background: var(--bg);
 }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -72,13 +86,13 @@ a:hover { text-decoration: underline; }
 /* Links */
 /* ===== Links del HEADER (blancos) ===== */
 .header-main .nav a{
-  color: #fff;
+  color: var(--blue);
 }
 
 /* Hover/Active del header */
 .header-main .nav a:hover,
 .header-main .nav a.active{
-  color: #fff;
+  color: var(--blue-deep);
   text-decoration: underline;
 }
 
@@ -111,22 +125,22 @@ a:hover { text-decoration: underline; }
 }
 .btn:hover { background: #274aa7; text-decoration: none; }
 
-.btn-cita {
-  background-color: #3b82f6;
-  color: #fff !important;
-  font-weight: 600;
+.btn-cita{
+  background-color: var(--yellow);
+  color: #1F2937 !important;
+  font-weight: 700;
   padding: .6rem 1rem;
   border-radius: .5rem;
   text-decoration: none !important;
   transition: background-color .2s ease, transform .2s ease;
   white-space: nowrap;
+  border: 1px solid var(--border);
 }
-.btn-cita:hover {
-  background-color: var(--teal);
+.btn-cita:hover{
+  background-color: var(--pink);
   transform: scale(1.05);
-  color: #fff;
+  color: #1F2937 !important;
 }
-
 /* ------------------- UTILIDADES / GRIDS ------------------- */
 .grid { display: grid; gap: 1rem; }
 .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -141,7 +155,7 @@ a:hover { text-decoration: underline; }
 /* Tarjetas y secciones */
 .card {
   background:#fff;
-  border:1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius:1rem;
   padding:1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
@@ -221,9 +235,9 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
 /* ------------------- HERO PRINCIPAL ------------------- */
 .hero {
-  color: #fff;
-  background: var(--blue);
-  min-height: 520px;             /* mobile */
+  color: var(--text);
+  background: var(--soft-blue);
+  min-height: 520px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -368,18 +382,22 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 }
 
 /* ------------------- FOOTER ------------------- */
-.footer {
+.footer{
   color:#fff;
-  background: var(--blue);
+  background: var(--blue-deep);
   padding: 2rem 0;
   margin-top: 2rem;
 }
-.footer a { color: #d1fae5; }
+.footer a{
+  color: var(--bg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* ========================================================= */
 /* ====== AJUSTES SOLO PARA PANTALLAS GRANDES (TU PC) ======= */
 /* ========================================================= */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   /* Mantengo tus ajustes originales para PC */
   .header-top { margin-left: -250px; }
 
@@ -411,6 +429,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
