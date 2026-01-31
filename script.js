@@ -118,23 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add(className);
   }
 
-function nextSlide() {
-  i = (i + 1) % slides.length;
-  imgEl.src = slides[i];
-  imgEl.alt = alts[i];
-  capEl.textContent = captions[i];
-  capEl.setAttribute('aria-label', captions[i]);
+  function nextSlide() {
+    i = (i + 1) % slides.length;
+    imgEl.src = slides[i];
+    imgEl.alt = alts[i];
+    capEl.textContent = captions[i];
+    capEl.setAttribute('aria-label', captions[i]);
 
-  // Re-lanzar animaciones
-  const wrap = imgEl.closest('.hero-visual');
-  if (wrap) animateOnce(wrap, 'is-animating');
-  animateOnce(capEl, 'is-animating');
-}
-
-// ✅ Si una imagen no carga, pasa al siguiente slide
-imgEl.addEventListener('error', () => {
-  nextSlide();
-});
+    // Re-lanzar animaciones
+    animateOnce(imgEl.parentElement, 'is-animating'); // contenedor .hero-visual
+    animateOnce(capEl, 'is-animating');
+  }
 
   // Inicial coherente al cargar
   imgEl.src = slides[0];
@@ -143,13 +137,9 @@ imgEl.addEventListener('error', () => {
   capEl.setAttribute('aria-label', captions[0]);
 
   // Primera animación al cargar
-  // Primera animación al cargar
-const wrap = imgEl.closest('.hero-visual');
-if (wrap) animateOnce(wrap, 'is-animating');
-animateOnce(capEl, 'is-animating');
+  animateOnce(imgEl.parentElement, 'is-animating');
+  animateOnce(capEl, 'is-animating');
 
   // Cambio automático
   setInterval(nextSlide, DURATION);
 });
-
-
