@@ -78,12 +78,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   border-bottom: 5px solid #e5e7eb;
   z-index: 10;
-  background: linear-gradient(
-  180deg,
-  #1E3A8A 0%,
-  #2B6CB0 55%,
-  #E9D8A6 100%
-);
+  background: #1E3A8A;
   height: 92px;
   display: flex;
   align-items: center;
@@ -103,7 +98,7 @@ a:hover { text-decoration: underline; }
 /* Hover/Active del header */
 .header-main .nav a:hover,
 .header-main .nav a.active{
-  color: var(--blue-deep);
+  color: var(--soft-warm);
   text-decoration: underline;
 }
 
@@ -452,3 +447,4 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
