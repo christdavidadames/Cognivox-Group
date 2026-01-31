@@ -143,10 +143,13 @@ imgEl.addEventListener('error', () => {
   capEl.setAttribute('aria-label', captions[0]);
 
   // Primera animación al cargar
-  animateOnce(imgEl.parentElement, 'is-animating');
-  animateOnce(capEl, 'is-animating');
+  // Primera animación al cargar
+const wrap = imgEl.closest('.hero-visual');
+if (wrap) animateOnce(wrap, 'is-animating');
+animateOnce(capEl, 'is-animating');
 
   // Cambio automático
   setInterval(nextSlide, DURATION);
 });
+
 
