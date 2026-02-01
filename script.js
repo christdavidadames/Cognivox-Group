@@ -88,6 +88,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ====== Hero: rotar imágenes (SIN frases) ======
+// ====== Ticker: loop perfecto (sin golpes en PC) ======
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.ticker-track');
+  const firstGroup = document.querySelector('.ticker-track .ticker-group');
+
+  if (!track || !firstGroup) return;
+
+  const setDistance = () => {
+    // ancho real del primer grupo (en px)
+    const w = firstGroup.getBoundingClientRect().width;
+    track.style.setProperty('--ticker-distance', `${w}px`);
+  };
+
+  setDistance();
+
+  // Recalcular en resize (por cambios de fuente / viewport)
+  let t;
+  window.addEventListener('resize', () => {
+    clearTimeout(t);
+    t = setTimeout(setDistance, 150);
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const imgEl = document.getElementById('heroSlide');
   if (!imgEl) return;
@@ -137,3 +160,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(nextSlide, DURATION);
 });
+
