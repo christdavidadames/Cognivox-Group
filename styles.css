@@ -234,6 +234,7 @@ a:hover { text-decoration: underline; }
 .hero{
   background: var(--bg); /* color crema */
   padding: 1.5rem 0 2rem;
+  min-height: 560px;
 }
 
 /* CONTENEDORES INTERNOS */
@@ -523,6 +524,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
