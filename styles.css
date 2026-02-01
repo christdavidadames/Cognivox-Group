@@ -82,8 +82,8 @@ a:hover { text-decoration: underline; }
   background: linear-gradient(
   180deg,
   var(--blue-dark) 0%,
-  var(--blue-dark) 85%,
-  rgba(233,138,166,.15) 100%
+  var(--blue-dark) 80%,
+  var(--pink) 100%
 );
 
   border-bottom: 5px solid rgba(229,231,235,.9);
@@ -316,8 +316,8 @@ a:hover { text-decoration: underline; }
   background: linear-gradient(
   180deg,
   var(--blue-dark) 0%,
-  var(--blue-dark) 85%,
-  rgba(233,138,166,.15) 100%
+  var(--blue-dark) 80%,
+  var(--pink) 100%
 );
   padding: 2rem 0;
   margin-top: 2rem;
@@ -430,11 +430,11 @@ a:hover { text-decoration: underline; }
   z-index: 0;
 
   background-image:
-    radial-gradient(8px 8px at 10% 20%, rgba(255,255,255,.9) 40%, transparent 41%),
-    radial-gradient(7px 7px at 30% 80%, rgba(255,255,255,.8) 40%, transparent 41%),
-    radial-gradient(6px 6px at 50% 40%, rgba(255,255,255,.7) 40%, transparent 41%),
-    radial-gradient(5px 5px at 70% 60%, rgba(255,255,255,.85) 40%, transparent 41%),
-    radial-gradient(4px 4px at 90% 25%, rgba(255,255,255,.9) 40%, transparent 41%);
+    radial-gradient(6px 6px at 10% 20%, rgba(255,255,255,.9) 40%, transparent 41%),
+    radial-gradient(5px 5px at 30% 80%, rgba(255,255,255,.8) 40%, transparent 41%),
+    radial-gradient(4px 4px at 50% 40%, rgba(255,255,255,.7) 40%, transparent 41%),
+    radial-gradient(3px 3px at 70% 60%, rgba(255,255,255,.85) 40%, transparent 41%),
+    radial-gradient(2px 2px at 90% 25%, rgba(255,255,255,.9) 40%, transparent 41%);
 
   background-size: 120px 120px; /* 🔥 MÁS estrellas */
   opacity: 0.6;
@@ -468,3 +468,4 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
