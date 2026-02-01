@@ -78,6 +78,7 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 50;
+  overflow: hidden;
 
   background: linear-gradient(
   180deg,
@@ -468,4 +469,5 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
