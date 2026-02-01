@@ -146,7 +146,7 @@ a:hover { text-decoration: underline; }
   display: inline-block;
 }
 .btn-cita:hover {
-  background-color: var(--teal);
+  background-color: #E9D8A6;
   transform: scale(1.05);
   color: #fff;
 }
@@ -445,6 +445,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
