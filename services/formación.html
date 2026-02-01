@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formación continua | Cognivox Group</title>
+  <meta name="description" content="Formación continua en comunicación, aprendizaje y bienestar. Talleres, charlas y capacitaciones para familias, docentes y profesionales." />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="header-main">
+  <div class="container nav">
+    <a href="../index.html" aria-label="Ir a inicio">
+      <img src="../images/inicio/logo-empresa.png" alt="Logo Cognivox Group" class="logo--header" loading="eager" decoding="async"
+           onerror="this.src='https://via.placeholder.com/160x64?text=Logo';" />
+    </a>
+
+    <nav class="show-md" style="gap:.25rem;" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../about.html">Nosotros</a>
+
+      <span class="dropdown" id="services">
+        <a href="#" id="servicesToggle" aria-haspopup="true" aria-expanded="false">Servicios▾</a>
+        <span class="dropdown-menu hidden" id="servicesMenu" role="menu" aria-label="Servicios">
+          <a href="./psicologia.html" role="menuitem">Psicología</a>
+          <a href="./logopedia.html" role="menuitem">Logopedia</a>
+          <a href="./formacion.html" role="menuitem" aria-current="page">Formación continua</a>
+        </span>
+      </span>
+
+      <a href="../blog.html">Blog</a>
+      <a href="../events.html">Eventos</a>
+      <a href="../multimedia.html">Multimedia</a>
+      <a href="../contact.html" class="btn-cita">Agende su cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="section">
+    <div class="container">
+      <h2>Formación continua</h2>
+      <p class="muted">Aprendizaje práctico y actualizado para fortalecer la comunicación, el desarrollo y el bienestar.</p>
+
+      <div class="grid grid-md-2" style="margin-top:1rem;">
+        <div class="card">
+          <h3>¿Qué ofrecemos?</h3>
+          <ul>
+            <li>Talleres y charlas para familias sobre desarrollo del lenguaje, comunicación y crianza.</li>
+            <li>Capacitaciones a docentes sobre estrategias inclusivas, apoyo al aprendizaje y manejo emocional.</li>
+            <li>Formación a profesionales y equipos de trabajo: comunicación efectiva, acompañamiento y prevención.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Temas frecuentes</h3>
+          <ul>
+            <li>Estimulación del lenguaje por edades.</li>
+            <li>Habilidades sociales y comunicación asertiva.</li>
+            <li>Apoyo a lectura/escritura y dificultades de aprendizaje.</li>
+            <li>Manejo de ansiedad, conducta y hábitos saludables.</li>
+            <li>Comunicación en familia y resolución de conflictos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h3>Modalidades</h3>
+        <p>Presencial u online, individual o grupal. También diseñamos programas a la medida para centros educativos e instituciones.</p>
+        <p><a class="btn" href="../contact.html">Solicitar información →</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container grid grid-md-2" style="gap:2rem;">
+    <div>
+      <img src="../images/inicio/Logo-empresa-footer.png"
+           alt="Logo Cognivox Group"
+           class="logo logo--footer"
+           loading="lazy"
+           decoding="async"
+           onerror="this.src='https://via.placeholder.com/160x56?text=Logo';" />
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>Avenida independencia Km 9 ½ de la Carretera Sánchez, Edificio Corimar, ll Suite 3-D, Santo Domingo, Distrito Nacional.</p>
+      <p><a href="tel:+18495851999">+1 (849) 585-1999</a> · <a href="mailto:mtolentino41@uasd.edu.do">mtolentino41@uasd.edu.do</a></p>
+      <hr class="soft" />
+      <small>© <span id="y"></span> Cognivox Group. Todos los derechos reservados.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
