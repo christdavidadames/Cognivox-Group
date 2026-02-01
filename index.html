@@ -72,8 +72,26 @@
               loading="eager"
               decoding="async"
             />
-            <div id="heroCaption" class="hero-caption is-animating" aria-live="polite">La vida</div>
           </div>
+
+          <!-- Tren de letras (debajo del hero-left y hero-right) -->
+<div class="container">
+  <div class="hero-ticker" aria-label="Mensajes destacados">
+    <div class="ticker-track" aria-hidden="true">
+      <span class="ticker-text">* Cognivox Group *</span>
+      <span class="ticker-text">* Amor *</span>
+      <span class="ticker-text">* Cognivox Group *</span>
+      <span class="ticker-text">* Paz *</span>
+
+      <!-- duplicado para loop continuo -->
+      <span class="ticker-text">* Cognivox Group *</span>
+      <span class="ticker-text">* Amor *</span>
+      <span class="ticker-text">* Cognivox Group *</span>
+      <span class="ticker-text">* Paz *</span>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
@@ -136,8 +154,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
-
-
-
-
