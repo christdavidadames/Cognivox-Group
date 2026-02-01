@@ -109,7 +109,7 @@ a:hover { text-decoration: underline; }
 
 /* ===== Links del DROPDOWN (azules) ===== */ 
 .header-main .dropdown-menu a{ 
-  color: var(--blue); 
+  color: #E9D8A6; 
   text-decoration: none; } 
 
 .header-main .dropdown-menu a:hover, 
@@ -446,6 +446,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
