@@ -30,7 +30,7 @@
   --shadow: 0 2px 8px rgba(0,0,0,.08);
 
   /* Header control (desktop) */
-  --header-shift-desktop: 20px; /* Cambia esto para empujar TODO el header a la izquierda */
+  --header-shift-desktop: 20px;
 }
 
 /* =========================================================
@@ -257,7 +257,6 @@ a:hover { text-decoration: underline; }
   }
 }
 
-
 /* Tu HTML ya tiene grid-md-2 dentro de .hero:
    <div class="container grid grid-md-2 hero-grid"> ... */
 .hero-grid{
@@ -289,14 +288,16 @@ a:hover { text-decoration: underline; }
 
 /* Carrusel */
 .hero-visual{
-  width: 100%;            
+  width: 100%;
   max-width: 100%;
-  aspect-ratio: 16 / 8;
+  height: 100%;
+  min-height: 320px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   position: relative;
 }
+
 
 .hero-visual img{
   width: 100%;
@@ -400,8 +401,8 @@ a:hover { text-decoration: underline; }
   .header-main{ height: 160px; }
   .logo--header{ height: 150px; }
 
-  .hero-left{ justify-content: flex-end; }  /* logo hacia la derecha */
-  .hero-right{ justify-content: flex-start; } /* carrusel hacia la izquierda */
+  .hero-left{ justify-content: center; }  /* logo hacia la derecha */
+  .hero-right{ justify-content: center; } /* carrusel hacia la izquierda */
   .logo-eslogan{ width: min(520px, 44vw); }
   .hero-visual{ width: min(820px, 50vw); }
 }
@@ -411,8 +412,8 @@ a:hover { text-decoration: underline; }
   .header-main{ height: 160px; }
   .logo--header{ height: 150px; }
 
-  .hero-left{ justify-content: flex-end; }
-  .hero-right{ justify-content: flex-start; }
+  .hero-left{ justify-content: center; }
+  .hero-right{ justify-content: center; }
   .logo-eslogan{ width: min(560px, 40vw); }
   .hero-visual{ width: min(900px, 56vw); }
 
@@ -433,8 +434,8 @@ a:hover { text-decoration: underline; }
 
   /* Hero en 2 columnas bien marcadas */
   .hero{ padding: 2rem 0 2.5rem; }
-  .hero-left{ justify-content: flex-end; }
-  .hero-right{ justify-content: flex-start; }
+  .hero-left{ justify-content: center; }
+  .hero-right{ justify-content: center; }
 
   .logo-eslogan{ width: clamp(420px, 34vw, 600px); }
   .hero-visual{ width: clamp(560px, 46vw, 980px); }
@@ -451,11 +452,6 @@ a:hover { text-decoration: underline; }
      sin romper el responsive. Controlado por variable. */
   .header-main .container.nav{
     transform: translateX(calc(-1 * var(--header-shift-desktop)));
-  }
-
-  /* Si quieres desplazar un poquito el carrusel, ya tienes la clase en HTML */
-  .hero-visual--shift{
-    transform: translateX(16px);
   }
 }
 
@@ -527,6 +523,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
