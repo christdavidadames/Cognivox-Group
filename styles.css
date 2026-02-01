@@ -1,10 +1,20 @@
-:root {
-  --blue: #1e3a8a;    /* azul profundo */
-  --teal: #0f766e;    /* teal / verde menta */
-  --text: #1f2937;    /* gris oscuro */
-  --muted: #6b7280;   /* gris medio */
-  --bg: #F8F6F2;      /* beige claro */
-  --max: 1100px;
+:root{ 
+  /* Marca (azul más suave que el actual) */ 
+  --blue: #2B4C9A; 
+  --blue-deep: #1F3C88; 
+  --soft-blue: #EEF3FF; /* Acentos */ 
+  --teal: #1C8A84; 
+  --yellow: #E7C873; 
+  --pink: #E98AA6; /* Neutros cálidos */ 
+  --bg: #F7F3EB; 
+  --surface: #FFFFFF; 
+  --text: #1F2937; 
+  --muted: #6B7280; 
+  --border: #E6E0D6; 
+  --blue-dark: #1E3A8A; /* base fuerte */ 
+  --blue-mid: #2B6CB0; /* transición */ 
+  --soft-warm: #E9D8A6; /* amarillo muy suave */ 
+  --max: 1100px; 
 }
 
 /* ------------------- ESTILOS BASE ------------------- */
@@ -58,7 +68,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   border-bottom: 5px solid #e5e7eb;
   z-index: 10;
-  background: var(--blue);
+  background: #1E3A8A;
   height: 92px;
   display: flex;
   align-items: center;
@@ -368,12 +378,9 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 }
 
 /* ------------------- FOOTER ------------------- */
-.footer {
-  color:#fff;
-  background: var(--blue);
-  padding: 2rem 0;
-  margin-top: 2rem;
-}
+.footer{ 
+  color: #1F2937; 
+  background: linear-gradient( 180deg, #1E3A8A 0%, #2B6CB0 55%, #E9D8A6 100% );
 .footer a { color: #d1fae5; }
 
 /* ========================================================= */
@@ -411,3 +418,4 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
