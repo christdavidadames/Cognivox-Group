@@ -261,7 +261,8 @@ a:hover { text-decoration: underline; }
 /* Tu HTML ya tiene grid-md-2 dentro de .hero:
    <div class="container grid grid-md-2 hero-grid"> ... */
 .hero-grid{
-  align-items: center;
+  align-items: stretch;
+  gap: 1rem;
 }
 
 /* Columnas */
@@ -269,11 +270,8 @@ a:hover { text-decoration: underline; }
 .hero-right{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
-/* En móvil (1 columna): logo arriba, carrusel abajo */
-.hero-left{ justify-content: center; }
-.hero-right{ justify-content: center; }
 
 @media (min-width: 768px){
   .hero-left,
@@ -286,11 +284,13 @@ a:hover { text-decoration: underline; }
   width: min(520px, 92vw);
   border-radius: var(--radius);
   pointer-events: none;
+  margin-inline: auto;
 }
 
 /* Carrusel */
 .hero-visual{
-  width: min(980px, 92vw);
+  width: 100%;            
+  max-width: 100%;
   aspect-ratio: 16 / 8;
   border-radius: var(--radius);
   overflow: hidden;
@@ -527,6 +527,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
