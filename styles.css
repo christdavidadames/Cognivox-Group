@@ -129,7 +129,7 @@ html, body { overflow-x: hidden; }
 
 /* ------------------- LOGOS ------------------- */
 /* Logo tamaños (mobile-first) */
-.logo--header { height: 72px; width: auto; flex-shrink: 0; }
+.logo--header { height: clamp(72px, 6vw, 200px); width: auto; flex-shrink: 0; }
 .logo--footer { height: 160px; width: auto; }
 
 /* ------------------- BOTONES ------------------- */
@@ -140,6 +140,8 @@ html, body { overflow-x: hidden; }
   padding: .6rem 1rem;
   border-radius: .5rem;
   text-decoration: none;
+  font-size: clamp(.95rem, .6vw, 1.05rem);
+  padding: clamp(.55rem, .5vw, .7rem) clamp(.9rem, .8vw, 1.15rem);
 }
 .btn:hover { background: #274aa7; text-decoration: none; }
 
@@ -148,13 +150,15 @@ html, body { overflow-x: hidden; }
   background-color: var(--yellow);
   color: #1F2937 !important;
   font-weight: 600;
-  padding: .6rem 1rem;
   border-radius: .5rem;
   text-decoration: none !important;
   transition: background-color .2s ease, transform .2s ease;
   white-space: nowrap;
   display: inline-block;
+  font-size: clamp(.95rem, .6vw, 1.05rem);
+  padding: clamp(.55rem, .5vw, .7rem) clamp(.9rem, .8vw, 1.15rem);
 }
+
 .btn-cita:hover {
   background-color: #E9A2B8;
   transform: scale(1.05);
@@ -271,7 +275,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   position: absolute;
   top: 110px;
   left: 12px;
-  width: min(520px, 92vw);
+  width: clamp(260px, 48vw, 560px);
   height: auto;
   margin: 0;
   border-radius: 1rem;
@@ -444,10 +448,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   }
 
   /* Logo sin offsets extremos */
-  .logo--header {
-    height: 220px;
-    margin-left: 0;
-  }
+ .logo--header { height: clamp(140px, 9vw, 220px); margin-left: 0; }
 
   /* Footer: evita empujar ancho con margin-right gigante */
   .logo--footer {
@@ -458,14 +459,14 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Tu hero puede quedarse, pero sin crear ancho extra */
   .hero { height: 600px; min-height: 600px; }
 
-  .logo-eslogan {
-    top: 130px;
-    left: 18%;
-    width: 500px;
-    max-width: 600px;
-    margin-left: -250px;
-    margin-top: -100px;
-  }
+.logo-eslogan {
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(420px, 34vw, 600px);
+  margin-left: 0;
+  margin-top: -100px;
+}
 
   /* IMPORTANTE: evita que el carrusel fuerce overflow */
   .hero-visual {
@@ -478,6 +479,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
 
 }
+
 
 
 
