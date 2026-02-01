@@ -79,7 +79,13 @@ a:hover { text-decoration: underline; }
   top: 0;
   z-index: 50;
 
-  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--pink) 100%);
+  background: linear-gradient(
+  180deg,
+  var(--blue-dark) 0%,
+  var(--blue-dark) 85%,
+  rgba(233,138,166,.15) 100%
+);
+
   border-bottom: 5px solid rgba(229,231,235,.9);
 
   display: flex;
@@ -307,7 +313,12 @@ a:hover { text-decoration: underline; }
 
 .footer{
   color: #fff;
-  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue-mid) 70%, rgba(233,138,166,.12) 100%);
+  background: linear-gradient(
+  180deg,
+  var(--blue-dark) 0%,
+  var(--blue-dark) 85%,
+  rgba(233,138,166,.15) 100%
+);
   padding: 2rem 0;
   margin-top: 2rem;
 }
@@ -394,10 +405,9 @@ a:hover { text-decoration: underline; }
 }
 
 /* =========================================================
-   ESTRELLAS DECORATIVAS – HEADER Y FOOTER
+   ESTRELLAS – EFECTO CONSTELACIÓN
    ========================================================= */
 
-/* Asegura que el contenido quede encima */
 .header-main,
 .footer {
   position: relative;
@@ -410,7 +420,7 @@ a:hover { text-decoration: underline; }
   z-index: 1;
 }
 
-/* CAPA 1 – Estrellas pequeñas */
+/* 🌌 Capa 1 – Muchas estrellas pequeñas */
 .header-main::before,
 .footer::before {
   content: "";
@@ -420,17 +430,17 @@ a:hover { text-decoration: underline; }
   z-index: 0;
 
   background-image:
-    radial-gradient(5px 5px at 15% 20%, rgba(255,255,255,.9) 40%, transparent 41%),
-    radial-gradient(4px 4px at 40% 60%, rgba(255,255,255,.8) 40%, transparent 41%),
-    radial-gradient(3px 3px at 70% 30%, rgba(255,255,255,.7) 40%, transparent 41%),
-    radial-gradient(2px 2px at 85% 75%, rgba(255,255,255,.8) 40%, transparent 41%),
-    radial-gradient(1px 1px at 25% 85%, rgba(255,255,255,.9) 40%, transparent 41%);
+    radial-gradient(8px 8px at 10% 20%, rgba(255,255,255,.9) 40%, transparent 41%),
+    radial-gradient(7px 7px at 30% 80%, rgba(255,255,255,.8) 40%, transparent 41%),
+    radial-gradient(6px 6px at 50% 40%, rgba(255,255,255,.7) 40%, transparent 41%),
+    radial-gradient(5px 5px at 70% 60%, rgba(255,255,255,.85) 40%, transparent 41%),
+    radial-gradient(4px 4px at 90% 25%, rgba(255,255,255,.9) 40%, transparent 41%);
 
-  background-size: 180px 180px;
-  opacity: 0.45;
+  background-size: 120px 120px; /* 🔥 MÁS estrellas */
+  opacity: 0.6;
 }
 
-/* CAPA 2 – Estrellas un poco más grandes */
+/* ✨ Capa 2 – Estrellas medianas */
 .header-main::after,
 .footer::after {
   content: "";
@@ -440,22 +450,21 @@ a:hover { text-decoration: underline; }
   z-index: 0;
 
   background-image:
-    radial-gradient(2px 2px at 10% 25%, rgba(255,255,255,.7) 40%, transparent 41%),
-    radial-gradient(2px 2px at 55% 50%, rgba(255,255,255,.6) 40%, transparent 41%),
-    radial-gradient(2px 2px at 80% 15%, rgba(255,255,255,.5) 40%, transparent 41%);
+    radial-gradient(2px 2px at 15% 35%, rgba(255,255,255,.8) 40%, transparent 41%),
+    radial-gradient(2px 2px at 60% 50%, rgba(255,255,255,.6) 40%, transparent 41%),
+    radial-gradient(2px 2px at 85% 15%, rgba(255,255,255,.7) 40%, transparent 41%);
 
-  background-size: 260px 260px;
-  opacity: 0.35;
+  background-size: 240px 240px;
+  opacity: 0.45;
 }
 
-/* ✨ Animación suave (opcional, recomendada) */
+/* ✨ Animación suave */
 @keyframes starsGlow {
-  0%, 100% { opacity: .25; }
-  50% { opacity: .55; }
+  0%, 100% { opacity: .4; }
+  50% { opacity: .75; }
 }
 
 .header-main::before,
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
-
