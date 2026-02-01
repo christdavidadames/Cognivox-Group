@@ -94,16 +94,28 @@ a:hover { text-decoration: underline; }
   border-radius: .375rem;
 }
 
-/* ------------------- LINKS HEADER + DROPDOWN (LIMPIO) ------------------- */
-/* Links del header (solo dentro del header) */
-.header-main a {
-  color: #fff;
-  text-decoration: none;
-}
-.header-main a:hover,
-.header-main a.active {
-  text-decoration: underline;
-}
+/* Links principales del header (Inicio, Eventos, Blog, etc.) */ 
+.header-main .nav nav > a:not(.btn-cita){ 
+  color: #fff; } 
+/* Botón/toggle "Servicios" (blanco también) */ 
+.header-main #servicesToggle{ 
+  color: #fff; } 
+/* Hover/Active */ 
+.header-main .nav nav > a:not(.btn-cita):hover, 
+.header-main .nav nav > a:not(.btn-cita).active, 
+.header-main #servicesToggle:hover{ 
+  color: #E9D8A6; /* amarillo suave */ 
+  text-decoration: underline; } 
+/* ===== Links del DROPDOWN (azules) ===== */ 
+.header-main .dropdown-menu a{ 
+  color: var(--blue); 
+  text-decoration: none; } 
+/* Hover/Focus del dropdown (fondo gris-azulado, texto azul) */ 
+.header-main .dropdown-menu a:hover, 
+.header-main .dropdown-menu a:focus, 
+.header-main .dropdown-menu a:active{ 
+  background: #eef2ff; 
+  color: var(--blue); }
 
 /* ------------------- LOGOS ------------------- */
 /* Logo tamaños (mobile-first) */
@@ -433,4 +445,5 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
