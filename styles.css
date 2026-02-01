@@ -193,8 +193,8 @@ a:hover { text-decoration: underline; }
 
 /* Botón cita */
 .btn-cita{
-  background: #fff;
-  color: var(--text) !important;
+  background: var(--pink);
+  color: #fff !important;
   font-weight: 800;
   border-radius: 10px;
   text-decoration: none !important;
@@ -469,6 +469,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
