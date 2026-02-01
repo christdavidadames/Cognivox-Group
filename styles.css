@@ -1,9 +1,4 @@
 /* =========================================================
-   COGNIVOX GROUP — CSS LIMPIO Y RESPONSIVE
-   Enfoque: Base estable + capas por dispositivo/orientación
-   ========================================================= */
-
-/* =========================================================
    0) VARIABLES (COLORES + ESCALAS)
    ========================================================= */
 :root{
@@ -397,3 +392,4 @@ a:hover { text-decoration: underline; }
     transform: translateX(16px);
   }
 }
+
