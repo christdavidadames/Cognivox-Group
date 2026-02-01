@@ -209,6 +209,35 @@ a:hover { text-decoration: underline; }
   transform: scale(1.03);
 }
 
+/* Botones estándar */
+.btn{
+  display: inline-block;
+  background: transparent;
+  color: #fff !important;
+
+  border: 2px solid var(--blue-dark);
+  border-radius: 10px;
+
+  font-weight: 800;
+  text-decoration: none !important;
+  white-space: nowrap;
+
+  padding: .6rem 1rem;
+
+  transition:
+    background-color .15s ease,
+    border-color .15s ease,
+    transform .15s ease,
+    color .15s ease;
+}
+
+.btn:hover{
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #fff !important;
+  transform: scale(1.03);
+}
+
 /* =========================================================
    3) HERO (BASE: móvil-first)
    ========================================================= */
@@ -472,3 +501,4 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
