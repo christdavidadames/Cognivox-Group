@@ -248,7 +248,7 @@ a:hover { text-decoration: underline; }
   max-width: 100%;
   min-width: 0;
 
-  max-height: 380px;
+  max-height: 370px;
   overflow: hidden;
 }
 
@@ -529,6 +529,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
