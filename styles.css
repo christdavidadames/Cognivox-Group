@@ -192,7 +192,7 @@ a:hover { text-decoration: underline; }
 
 /* Botón cita */
 .btn-cita{
-  background: var(--yellow);
+  background: #fff;
   color: var(--text) !important;
   font-weight: 800;
   border-radius: 10px;
