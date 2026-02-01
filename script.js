@@ -87,11 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ====== Hero: rotar imágenes + frases centradas ======
+// ====== Hero: rotar imágenes (SIN frases) ======
 document.addEventListener('DOMContentLoaded', () => {
   const imgEl = document.getElementById('heroSlide');
-  const capEl = document.getElementById('heroCaption');
-  if (!imgEl || !capEl) return;
+  if (!imgEl) return;
 
   // Rutas de tus imágenes (en ./images/inicio/)
   const slides = [
@@ -101,20 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
     './images/inicio/psicologia-inicio-2.jpg'
   ];
 
-  // Frases (mismo orden y cantidad que las imágenes)
-  const captions = ['La vida', 'Paz', 'El amor', 'La salud'];
-  const alts     = ['Logopedia inicio 1', 'Psicología inicio 1', 'Logopedia inicio 2', 'Psicología inicio 2'];
+  const alts = [
+    'Logopedia inicio 1',
+    'Psicología inicio 1',
+    'Logopedia inicio 2',
+    'Psicología inicio 2'
+  ];
 
   // Pre-cargar imágenes
   slides.forEach(src => { const im = new Image(); im.src = src; });
 
   let i = 0;
-  const DURATION = 5000; // ms entre cambios
+  const DURATION = 5000;
 
-  // helper para reiniciar animación
   function animateOnce(el, className) {
     el.classList.remove(className);
-    void el.offsetWidth; // fuerza reflow
+    void el.offsetWidth;
     el.classList.add(className);
   }
 
@@ -122,24 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     i = (i + 1) % slides.length;
     imgEl.src = slides[i];
     imgEl.alt = alts[i];
-    capEl.textContent = captions[i];
-    capEl.setAttribute('aria-label', captions[i]);
 
-    // Re-lanzar animaciones
-    animateOnce(imgEl.parentElement, 'is-animating'); // contenedor .hero-visual
-    animateOnce(capEl, 'is-animating');
+    // Re-lanzar animación SOLO de la imagen (contenedor .hero-visual)
+    animateOnce(imgEl.parentElement, 'is-animating');
   }
 
-  // Inicial coherente al cargar
+  // Inicial
   imgEl.src = slides[0];
   imgEl.alt = alts[0];
-  capEl.textContent = captions[0];
-  capEl.setAttribute('aria-label', captions[0]);
 
   // Primera animación al cargar
   animateOnce(imgEl.parentElement, 'is-animating');
-  animateOnce(capEl, 'is-animating');
 
-  // Cambio automático
   setInterval(nextSlide, DURATION);
 });
