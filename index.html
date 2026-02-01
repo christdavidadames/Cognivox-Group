@@ -46,55 +46,54 @@
   </header>
 
   <main id="contenido">
-    <!-- Hero -->
     <section class="hero">
-      <div class="container grid grid-md-2" style="align-items:center;gap:2rem;">
-        <!-- Columna izquierda: logo con eslogan -->
-        <div class="hero-left">
-           <img
-            src="./images/inicio/logo-eslogan.png"
-            alt="Cognivox Group - Cuidamos tu mente, fortalecemos tu voz"
-            class="logo-eslogan"
-            loading="eager"
-            decoding="async"
-            onerror="this.style.display='none';"
-          />
-        </div>
+  <!-- 2 columnas: hero-left + hero-right -->
+  <div class="container grid grid-md-2" style="align-items:center;gap:2rem;">
+    <!-- Columna izquierda: logo con eslogan -->
+    <div class="hero-left">
+      <img
+        src="./images/inicio/logo-eslogan.png"
+        alt="Cognivox Group - Cuidamos tu mente, fortalecemos tu voz"
+        class="logo-eslogan"
+        loading="eager"
+        decoding="async"
+        onerror="this.style.display='none';"
+      />
+    </div>
 
-        <!-- Columna derecha: carrusel (ligeramente desplazado a la derecha) -->
-        <div class="hero-right" aria-label="Carrusel principal">
-          <div class="hero-visual hero-visual--shift is-animating">
-            <img
-              id="heroSlide"
-              src="./images/inicio/logopedia-inicio-1.jpg"
-              alt="Logopedia y psicología"
-              class="logopedia-inicio"
-              loading="eager"
-              decoding="async"
-            />
-          </div>
-
-          <!-- Tren de letras (debajo del hero-left y hero-right) -->
-<div class="container">
-  <div class="hero-ticker" aria-label="Mensajes destacados">
-    <div class="ticker-track" aria-hidden="true">
-      <span class="ticker-text">* Cognivox Group *</span>
-      <span class="ticker-text">* Amor *</span>
-      <span class="ticker-text">* Cognivox Group *</span>
-      <span class="ticker-text">* Paz *</span>
-
-      <!-- duplicado para loop continuo -->
-      <span class="ticker-text">* Cognivox Group *</span>
-      <span class="ticker-text">* Amor *</span>
-      <span class="ticker-text">* Cognivox Group *</span>
-      <span class="ticker-text">* Paz *</span>
+    <!-- Columna derecha: carrusel de imágenes (se mantiene) -->
+    <div class="hero-right" aria-label="Carrusel principal">
+      <div class="hero-visual hero-visual--shift is-animating">
+        <img
+          id="heroSlide"
+          src="./images/inicio/logopedia-inicio-1.jpg"
+          alt="Logopedia y psicología"
+          class="logopedia-inicio"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
     </div>
   </div>
-</div>
 
-        </div>
+  <!-- Tren de letras (debajo del hero-left y hero-right) -->
+  <div class="container">
+    <div class="hero-ticker" aria-label="Mensajes destacados">
+      <div class="ticker-track" aria-hidden="true">
+        <span class="ticker-text">* Cognivox Group *</span>
+        <span class="ticker-text">* Amor *</span>
+        <span class="ticker-text">* Cognivox Group *</span>
+        <span class="ticker-text">* Paz *</span>
+
+        <!-- duplicado para loop continuo -->
+        <span class="ticker-text">* Cognivox Group *</span>
+        <span class="ticker-text">* Amor *</span>
+        <span class="ticker-text">* Cognivox Group *</span>
+        <span class="ticker-text">* Paz *</span>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Servicios -->
     <section class="section" style="background: var(--bg);">
@@ -154,3 +153,4 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
