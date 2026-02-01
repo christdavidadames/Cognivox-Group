@@ -96,7 +96,7 @@ a:hover { text-decoration: underline; }
 
 /* Links principales del header (Inicio, Eventos, Blog, etc.) */ 
 .header-main .nav nav > a:not(.btn-cita){ 
-  color: #fff; } 
+  color: #E9D8A6; } 
 /* Botón/toggle "Servicios" (blanco también) */ 
 .header-main #servicesToggle{ 
   color: #fff; } 
@@ -104,7 +104,7 @@ a:hover { text-decoration: underline; }
 .header-main .nav nav > a:not(.btn-cita):hover, 
 .header-main .nav nav > a:not(.btn-cita).active, 
 .header-main #servicesToggle:hover{ 
-  color: #E9D8A6; /* amarillo suave */ 
+  color: #E9A2B8; /* amarillo suave */ 
   text-decoration: underline; } 
 /* ===== Links del DROPDOWN (azules) ===== */ 
 .header-main .dropdown-menu a{ 
@@ -445,5 +445,6 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
