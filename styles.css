@@ -78,8 +78,7 @@ a:hover { text-decoration: underline; }
   background: linear-gradient( 
     180deg, 
     #1E3A8A 0%, 
-    #2B6CB0 70%, 
-    #E9D8A6 100% ); 
+    #2B6CB0 70%); 
 }
 
 /* Navegación */
@@ -450,3 +449,4 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
