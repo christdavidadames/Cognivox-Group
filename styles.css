@@ -234,7 +234,6 @@ a:hover { text-decoration: underline; }
 .hero{
   background: var(--bg); /* color crema */
   padding: 1.5rem 0 2rem;
-  max-height: 460px;
 }
 
 /* CONTENEDORES INTERNOS */
@@ -243,8 +242,14 @@ a:hover { text-decoration: underline; }
   background: var(--blue-dark);
   border: 2px solid var(--pink);
   border-radius: 18px;
-
   padding: 1.25rem;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  max-height: 420px;
+  overflow: hidden;
 }
 
 /* Ajuste visual para que no se peguen */
@@ -524,6 +529,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
