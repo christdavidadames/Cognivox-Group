@@ -346,7 +346,7 @@ a:hover { text-decoration: underline; }
 /* =========================================================
    4) TARJETAS / SECCIONES / FOOTER (BASE)
    ========================================================= */
-.section{ padding: 3rem 0; }
+.section{ padding: 1.75rem 0; }
 
 .card{
   background: #fff;
@@ -527,6 +527,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
