@@ -331,13 +331,11 @@ a:hover { text-decoration: underline; }
 
 .hero-ticker{
   margin-top: 1rem;
-
   background: var(--blue-dark);
   border: 2px solid var(--pink);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow);
-
   position: relative;
 }
 
@@ -362,16 +360,22 @@ a:hover { text-decoration: underline; }
 .ticker-track{
   position: relative;
   z-index: 1;
-
   display: inline-flex;
   align-items: center;
   gap: 1.25rem;
-
   padding: .9rem 1rem;
   white-space: nowrap;
   will-change: transform;
-
+  width: max-content;
   animation: tickerMove 14s linear infinite;
+}
+
+.ticker-group{
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: .9rem 1rem;
+  white-space: nowrap;
 }
 
 .ticker-text{
@@ -383,8 +387,8 @@ a:hover { text-decoration: underline; }
 
 /* infinito y sin pausas */
 @keyframes tickerMove{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -590,6 +594,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
