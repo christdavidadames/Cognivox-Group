@@ -99,7 +99,7 @@ a:hover { text-decoration: underline; }
   color: #E9D8A6; } 
 /* Botón/toggle "Servicios" (blanco también) */ 
 .header-main #servicesToggle{ 
-  color: #fff; } 
+  color: #E9D8A6; } 
 /* Hover/Active */ 
 .header-main .nav nav > a:not(.btn-cita):hover, 
 .header-main .nav nav > a:not(.btn-cita).active, 
@@ -135,8 +135,8 @@ a:hover { text-decoration: underline; }
 
 /* Mantengo tu clase para no tocar HTML */
 .btn-cita {
-  background-color: #3b82f6;
-  color: #fff !important;
+  background-color: var(--yellow);
+  color: #1F2937 !important;
   font-weight: 600;
   padding: .6rem 1rem;
   border-radius: .5rem;
@@ -445,6 +445,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
