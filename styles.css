@@ -21,7 +21,7 @@
 
   --blue-dark: #1E3A8A;
   --blue-mid:  #2B6CB0;
-  --soft-warm: #E9D8A6;
+  --soft-warm: #fff;
 
   /* Layout */
   --max: 1100px;
@@ -498,3 +498,4 @@ hr.soft { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5rem 0; }
  }
    
 }
+
