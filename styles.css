@@ -79,7 +79,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   z-index: 50;
 
-  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--pink) 80%);
+  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--pink) 10%);
   border-bottom: 5px solid rgba(229,231,235,.9);
 
   display: flex;
@@ -458,6 +458,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
