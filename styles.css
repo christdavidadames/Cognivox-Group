@@ -230,12 +230,33 @@ a:hover { text-decoration: underline; }
 /* =========================================================
    3) HERO (BASE: móvil-first)
    ========================================================= */
+/* HERO CONTENEDOR GENERAL */
 .hero{
-  background: var(--blue);
-  color: #fff;
-
-  padding: 1.25rem 0 2rem;
+  background: var(--bg); /* color crema */
+  padding: 1.5rem 0 2rem;
 }
+
+/* CONTENEDORES INTERNOS */
+.hero-left,
+.hero-right{
+  background: var(--blue-dark);
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+
+  padding: 1.25rem;
+}
+
+/* Ajuste visual para que no se peguen */
+.hero-left{
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px){
+  .hero-left{
+    margin-bottom: 0;
+  }
+}
+
 
 /* Tu HTML ya tiene grid-md-2 dentro de .hero:
    <div class="container grid grid-md-2 hero-grid"> ... */
@@ -254,6 +275,12 @@ a:hover { text-decoration: underline; }
 .hero-left{ justify-content: center; }
 .hero-right{ justify-content: center; }
 
+@media (min-width: 768px){
+  .hero-left,
+  .hero-right{
+    align-items: center;
+  }
+}
 /* Logo-eslogan (flujo normal, NO absolute) */
 .logo-eslogan{
   width: min(520px, 92vw);
@@ -500,6 +527,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
