@@ -414,7 +414,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 /* ========================================================= */
 /* ====== AJUSTES SOLO PARA PANTALLAS GRANDES (TU PC) ======= */
 /* ========================================================= */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   /* Mantengo tus ajustes originales para PC */
   .header-top { margin-left: -250px; }
 
@@ -424,7 +424,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
   .nav nav { margin-left: 27rem; } /* tu ajuste original */
 
-  .logo--header { height: 250px; margin-left: -200px; }
+  .logo--header { height: 250px; margin-left: -250px; }
   .logo--footer { height: 250px; margin-right: 500px; }
 
   .hero { height: 600px; min-height: 600px; }
@@ -446,6 +446,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
