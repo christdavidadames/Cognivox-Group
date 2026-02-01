@@ -115,7 +115,7 @@ a:hover { text-decoration: underline; }
 .header-main .dropdown-menu a:focus, 
 .header-main .dropdown-menu a:active{ 
   background: #eef2ff; 
-  color: var(--blue); }
+  color: #E9D8A6; }
 
 /* ------------------- LOGOS ------------------- */
 /* Logo tamaños (mobile-first) */
@@ -445,6 +445,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 }
+
 
 
 
