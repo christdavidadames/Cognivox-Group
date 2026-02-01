@@ -78,7 +78,6 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 50;
-  overflow: visible;
 
   background: linear-gradient(
   180deg,
@@ -409,8 +408,12 @@ a:hover { text-decoration: underline; }
    ESTRELLAS – EFECTO CONSTELACIÓN
    ========================================================= */
 
-.header-main,
-.footer {
+.header-main{
+  position: relative;
+  overflow: visible;
+}
+
+.footer{
   position: relative;
   overflow: hidden;
 }
@@ -469,7 +472,3 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
-
-
-
-
