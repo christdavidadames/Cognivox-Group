@@ -237,9 +237,22 @@ a:hover { text-decoration: underline; }
 }
 
 /* CONTENEDORES INTERNOS */
-.hero-left,
-.hero-right{
+.hero-left{
   background: var(--blue-dark);
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 1.25rem;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  max-height: 370px;
+  overflow: hidden;
+}
+
+.hero-right{
+  background: var(--pink);
   border: 2px solid var(--pink);
   border-radius: 18px;
   padding: 1.25rem;
@@ -577,6 +590,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
