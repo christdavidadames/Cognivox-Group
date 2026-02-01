@@ -30,7 +30,7 @@
   --shadow: 0 2px 8px rgba(0,0,0,.08);
 
   /* Header control (desktop) */
-  --header-shift-desktop: 0px; /* Cambia esto para empujar TODO el header a la izquierda */
+  --header-shift-desktop: 20px; /* Cambia esto para empujar TODO el header a la izquierda */
 }
 
 /* =========================================================
@@ -500,6 +500,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
