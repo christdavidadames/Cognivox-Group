@@ -306,8 +306,8 @@ a:hover { text-decoration: underline; }
 }
 
 .footer{
-  color: var(--pink);
-  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue-mid) 70%, rgba(255,255,255,.05) 100%);
+  color: #fff;
+  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue-mid) 70%, rgba(233,138,166,.12) 100%);
   padding: 2rem 0;
   margin-top: 2rem;
 }
@@ -458,3 +458,4 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
