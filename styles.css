@@ -33,6 +33,12 @@ a:hover { text-decoration: underline; }
 
 .container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
 
+/* Evita scroll horizontal por desbordes */
+html, body { overflow-x: hidden; }
+
+/* Asegura que el header no empuje el layout */
+.header-main .container { width: 100%; }
+
 /* Accesibilidad */
 .skip-link {
   position: absolute;
@@ -470,12 +476,8 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
 
-  /* Evita scroll horizontal por desbordes */
-html, body { overflow-x: hidden; }
-
-/* Asegura que el header no empuje el layout */
-.header-main .container { width: 100%; }
 
 }
+
 
 
