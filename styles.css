@@ -106,7 +106,7 @@ hr.soft { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5rem 0; }
   z-index: 10;
   border-bottom: 5px solid #e5e7eb;
 
-  height: 92px;
+  height: clamp(140px, 16vw, 190px);
   display: flex;
   align-items: center;
 
@@ -126,7 +126,7 @@ hr.soft { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5rem 0; }
 
 /* LOGO */
 .logo--header {
-  height: clamp(72px, 6vw, 200px);
+  height: clamp(160px, 18vw, 320px);
   width: auto;
   flex-shrink: 0;
 }
@@ -467,7 +467,7 @@ hr.soft { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5rem 0; }
    13) RESPONSIVE: AJUSTES GRANDES
    ========================================================= */
 @media (min-width: 1024px) {
-  .header-main { height: 150px; }
+  .header-main { height: clamp(170px, 12vw, 240px); }
 
   /* nav alineado sin empujes raros */
   .nav nav {
@@ -492,3 +492,4 @@ hr.soft { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5rem 0; }
   /* footer logo */
   .logo--footer { height: 250px; }
 }
+
