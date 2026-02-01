@@ -491,5 +491,12 @@ hr.soft { border: 0; border-top: 1px solid #e5e7eb; margin: 1.5rem 0; }
 
   /* footer logo */
   .logo--footer { height: 250px; }
+   
+   /* Mover el header main (logo y links)*/
+   .header-main .container{
+   padding-left: .25rem;
+ }
+   
 }
+
 
