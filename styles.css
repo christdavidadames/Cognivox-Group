@@ -393,4 +393,71 @@ a:hover { text-decoration: underline; }
   }
 }
 
+/* =========================================================
+   ESTRELLAS DECORATIVAS – HEADER Y FOOTER
+   ========================================================= */
+
+/* Asegura que el contenido quede encima */
+.header-main,
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-main > *,
+.footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* CAPA 1 – Estrellas pequeñas */
+.header-main::before,
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,.9) 40%, transparent 41%),
+    radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,.8) 40%, transparent 41%),
+    radial-gradient(1px 1px at 70% 30%, rgba(255,255,255,.7) 40%, transparent 41%),
+    radial-gradient(1px 1px at 85% 75%, rgba(255,255,255,.8) 40%, transparent 41%),
+    radial-gradient(1px 1px at 25% 85%, rgba(255,255,255,.9) 40%, transparent 41%);
+
+  background-size: 180px 180px;
+  opacity: 0.45;
+}
+
+/* CAPA 2 – Estrellas un poco más grandes */
+.header-main::after,
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(2px 2px at 10% 25%, rgba(255,255,255,.7) 40%, transparent 41%),
+    radial-gradient(2px 2px at 55% 50%, rgba(255,255,255,.6) 40%, transparent 41%),
+    radial-gradient(2px 2px at 80% 15%, rgba(255,255,255,.5) 40%, transparent 41%);
+
+  background-size: 260px 260px;
+  opacity: 0.35;
+}
+
+/* ✨ Animación suave (opcional, recomendada) */
+@keyframes starsGlow {
+  0%, 100% { opacity: .25; }
+  50% { opacity: .55; }
+}
+
+.header-main::before,
+.footer::before {
+  animation: starsGlow 6s ease-in-out infinite;
+}
+
+
 
