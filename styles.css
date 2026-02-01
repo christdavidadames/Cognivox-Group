@@ -330,16 +330,22 @@ a:hover { text-decoration: underline; }
    ========================================================= */
 
 .hero-ticker{
-  margin-top: 1rem;
-  background: var(--blue-dark);
+  margin-top: 1.25rem;
+
+  /* más grande */
+  border-radius: 22px;
   border: 2px solid var(--pink);
-  border-radius: 18px;
-  overflow: hidden;
   box-shadow: var(--shadow);
+
+  background: var(--blue-dark);
+  overflow: hidden;
   position: relative;
+
+  /* altura visual extra */
+  padding-block: .25rem;
 }
 
-/* Estrellas solo en el ticker (reutilizando tu idea del header/footer) */
+/* estrellas */
 .hero-ticker::before{
   content: "";
   position: absolute;
@@ -353,42 +359,51 @@ a:hover { text-decoration: underline; }
     radial-gradient(4px 4px at 70% 30%, rgba(255,255,255,.7) 40%, transparent 41%),
     radial-gradient(3px 3px at 85% 70%, rgba(255,255,255,.6) 40%, transparent 41%),
     radial-gradient(2px 2px at 55% 55%, rgba(255,255,255,.55) 40%, transparent 41%);
-  opacity: .35;
+  opacity: .40;
 }
 
-/* pista */
+/* track animado */
 .ticker-track{
   position: relative;
   z-index: 1;
-  display: inline-flex;
+
+  display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: .9rem 1rem;
-  white-space: nowrap;
+
+  width: max-content;          /* importante */
   will-change: transform;
-  width: max-content;
-  animation: tickerMove 14s linear infinite;
+  animation: tickerMove 16s linear infinite;
 }
 
+/* cada mitad idéntica */
 .ticker-group{
   display: inline-flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: .9rem 1rem;
+  gap: 1.6rem;                 /* un poco más espacioso */
+  padding: 1.05rem 1.35rem;    /* más “alto” y más “ancho” */
   white-space: nowrap;
 }
 
 .ticker-text{
   color: #fff;
   font-weight: 900;
-  letter-spacing: .4px;
-  font-size: clamp(1.0rem, 2.0vw, 1.35rem);
+  letter-spacing: .5px;
+
+  /* más grande */
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+  line-height: 1;
 }
 
-/* infinito y sin pausas */
+/* ahora sí: empalma perfecto porque hay 2 grupos iguales */
 @keyframes tickerMove{
   from { transform: translate3d(0,0,0); }
   to   { transform: translate3d(-50%,0,0); }
+}
+
+/* (opcional pero MUY recomendado) bordes suaves para que se vea natural */
+.hero-ticker{
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -594,19 +609,3 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
