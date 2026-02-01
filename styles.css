@@ -185,7 +185,9 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 /* ------------------- MENÚ RESPONSIVE ------------------- */
 /* Desktop nav visible >=768px */
 .show-md { display: none; }
-@media (min-width: 768px) { .show-md { display: inline-flex; } }
+/* Mostrar nav completo SOLO en pantallas más amplias */
+@media (min-width: 1100px) { .show-md { display: inline-flex; } }
+
 
 /* Botón hamburguesa visible en móvil, oculto en desktop */
 .menu-btn {
@@ -415,21 +417,39 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 }
 
 /* ========================================================= */
-/* ====== AJUSTES SOLO PARA PANTALLAS GRANDES (TU PC) ======= */
+/* ====== AJUSTES RESPONSIVOS PARA PANTALLAS GRANDES ======== */
 /* ========================================================= */
-@media (min-width: 1280px) {
-  /* Mantengo tus ajustes originales para PC */
-  .header-top { margin-left: -250px; }
+@media (min-width: 1024px) {
 
-  .header-main {
-    height: 150px;
+  /* NO uses márgenes negativos para layout global */
+  .header-top { margin-left: 0; }
+
+  .header-main { height: 150px; }
+
+  /* El nav se alinea solo (sin empujarlo con margin-left) */
+  .nav nav {
+    margin-left: auto;            /* empuja nav hacia la derecha */
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;              /* si falta espacio, baja a otra línea */
+    gap: .25rem;
+    max-width: calc(100% - 240px); /* reserva espacio para el logo */
   }
 
-  .nav nav { margin-left: 27rem; } /* tu ajuste original */
+  /* Logo sin offsets extremos */
+  .logo--header {
+    height: 220px;
+    margin-left: 0;
+  }
 
-  .logo--header { height: 250px; margin-left: -250px; }
-  .logo--footer { height: 250px; margin-right: 500px; }
+  /* Footer: evita empujar ancho con margin-right gigante */
+  .logo--footer {
+    height: 250px;
+    margin-right: 0;
+  }
 
+  /* Tu hero puede quedarse, pero sin crear ancho extra */
   .hero { height: 600px; min-height: 600px; }
 
   .logo-eslogan {
@@ -441,12 +461,21 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
     margin-top: -100px;
   }
 
+  /* IMPORTANTE: evita que el carrusel fuerce overflow */
   .hero-visual {
-    width: 185%;
-    margin-left: -270px;
+    width: 100%;
+    margin-left: 0;
   }
 
   /* Baja un pelín todo el botón "Servicios" */
   .header-main .nav .dropdown { transform: translateY(1px); }
+
+  /* Evita scroll horizontal por desbordes */
+html, body { overflow-x: hidden; }
+
+/* Asegura que el header no empuje el layout */
+.header-main .container { width: 100%; }
+
 }
+
 
