@@ -1,22 +1,36 @@
-:root {
-  --blue: #1e3a8a;    /* azul profundo */
-  --teal: #0f766e;    /* teal / verde menta */
-  --text: #1f2937;    /* gris oscuro */
-  --muted: #6b7280;   /* gris medio */
-  --bg: #F8F6F2;      /* beige claro */
-  --max: 1100px;
-}
+:root{ 
+  /* Marca (azul más suave que el actual) */ 
+  --blue: #2B4C9A; 
+  --blue-deep: #1F3C88; 
+  --soft-blue: #EEF3FF; 
+  /* Acentos */ 
+  --teal: #1C8A84; 
+  --yellow: #E7C873; 
+  --pink: #E98AA6; 
+  /* Neutros cálidos */ 
+  --bg: #F7F3EB; 
+  --surface: #FFFFFF; 
+  --text: #1F2937; 
+  --muted: #6B7280; 
+  --border: #E6E0D6; 
+  --blue-dark: #1E3A8A; /* base fuerte */ 
+  --blue-mid: #2B6CB0; /* transición */ 
+  --soft-warm: #E9D8A6; /* amarillo muy suave */ 
+  --max: 1100px; }
 
 /* ------------------- ESTILOS BASE ------------------- */
 * { box-sizing: border-box; }
+
 html, body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
 }
+
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
 .container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
 
 /* Accesibilidad */
@@ -58,45 +72,40 @@ a:hover { text-decoration: underline; }
   top: 0;
   border-bottom: 5px solid #e5e7eb;
   z-index: 10;
-  background: var(--blue);
+  background: #1E3A8A;
   height: 92px;
   display: flex;
   align-items: center;
 }
 
 /* Navegación */
-.nav { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
 .nav nav { margin-left: 0; }
-.nav a { font-weight: 500; padding: .5rem .75rem; border-radius: .375rem; }
 
-/* Links */
-/* ===== Links del HEADER (blancos) ===== */
-.header-main .nav a{
-  color: #fff;
+/* Links en general (estructura) */
+.nav a {
+  font-weight: 500;
+  padding: .5rem .75rem;
+  border-radius: .375rem;
 }
 
-/* Hover/Active del header */
-.header-main .nav a:hover,
-.header-main .nav a.active{
+/* ------------------- LINKS HEADER + DROPDOWN (LIMPIO) ------------------- */
+/* Links del header (solo dentro del header) */
+.header-main a {
   color: #fff;
+  text-decoration: none;
+}
+.header-main a:hover,
+.header-main a.active {
   text-decoration: underline;
 }
 
-/* ===== Links del DROPDOWN (azules) ===== */
-.header-main .dropdown-menu a{
-  color: var(--blue);
-  text-decoration: none;
-}
-
-/* Hover/Focus del dropdown (fondo gris-azulado, texto azul) */
-.header-main .dropdown-menu a:hover,
-.header-main .dropdown-menu a:focus,
-.header-main .dropdown-menu a:active{
-  background: #eef2ff;
-  color: var(--blue);
-}
-
-
+/* ------------------- LOGOS ------------------- */
 /* Logo tamaños (mobile-first) */
 .logo--header { height: 72px; width: auto; flex-shrink: 0; }
 .logo--footer { height: 160px; width: auto; }
@@ -104,13 +113,15 @@ a:hover { text-decoration: underline; }
 /* ------------------- BOTONES ------------------- */
 .btn {
   display: inline-block;
-  background: var(--blue); /* ✅ corregido: antes estaba var (--bg) */
+  background: var(--blue);
   color: #fff;
   padding: .6rem 1rem;
   border-radius: .5rem;
+  text-decoration: none;
 }
 .btn:hover { background: #274aa7; text-decoration: none; }
 
+/* Mantengo tu clase para no tocar HTML */
 .btn-cita {
   background-color: #3b82f6;
   color: #fff !important;
@@ -120,6 +131,7 @@ a:hover { text-decoration: underline; }
   text-decoration: none !important;
   transition: background-color .2s ease, transform .2s ease;
   white-space: nowrap;
+  display: inline-block;
 }
 .btn-cita:hover {
   background-color: var(--teal);
@@ -184,11 +196,12 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 
 /* ------------------- DROPDOWN "SERVICIOS" ------------------- */
 .dropdown { position: relative; display: inline-flex; align-items: center; }
+
 .dropdown-menu {
   position:absolute;
   top:100%;
   left:0;
-  background: #fff;              /* ✅ más legible */
+  background: #fff;
   border:1px solid #e5e7eb;
   border-radius:.75rem;
   min-width:180px;
@@ -196,18 +209,18 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   z-index: 1000;
   padding: .35rem;
 }
-.dropdown-menu a {
+
+/* Links dentro del dropdown (NO heredan el blanco del header) */
+.header-main .dropdown-menu a {
   display:block;
   padding:.55rem .75rem;
-  color: var(--blue) !important;            /* ✅ antes era var(--bg) y no se veía */
+  color: var(--blue);
   border-radius: .5rem;
   text-decoration: none;
 }
-.dropdown-menu a:hover,
-.dropdown-menu a:focus,
-.dropdown-menu a:active {
+.header-main .dropdown-menu a:hover,
+.header-main .dropdown-menu a:focus {
   background:#eef2ff;
-  color: var(--blue);
   outline: none;
 }
 
@@ -223,7 +236,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 .hero {
   color: #fff;
   background: var(--blue);
-  min-height: 520px;             /* mobile */
+  min-height: 520px; /* mobile */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -316,17 +329,16 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   place-items: center;
 }
 .block-icon img {
-  max-width: 100% !important;
-  max-height: 100% !important;
-  width: auto !important;
-  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
 }
-.block-icon img.VisionPNG{
-  width: 110px !important;
-  height: auto !important;
+.block-icon img.VisionPNG {
+  width: 110px;
+  height: auto;
 }
 
 /* Lista de valores con espaciado limpio */
@@ -368,13 +380,23 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
 }
 
 /* ------------------- FOOTER ------------------- */
-.footer {
-  color:#fff;
-  background: var(--blue);
-  padding: 2rem 0;
-  margin-top: 2rem;
+.footer{ 
+  color: #1F2937; 
+  background: linear-gradient( 
+    180deg, 
+    #1E3A8A 0%, 
+    #2B6CB0 55%, 
+    #E9D8A6 100% ); 
+  
+  padding: 2rem 0; 
+  margin-top: 2rem; } 
+
+.footer a{ 
+  color: var(--blue); 
+  font-weight: 700; 
+  text-decoration: underline; 
+  text-underline-offset: 3px; 
 }
-.footer a { color: #d1fae5; }
 
 /* ========================================================= */
 /* ====== AJUSTES SOLO PARA PANTALLAS GRANDES (TU PC) ======= */
@@ -384,7 +406,7 @@ hr.soft { border:0; border-top:1px solid #e5e7eb; margin:1.5rem 0; }
   .header-top { margin-left: -250px; }
 
   .header-main {
-        height: 150px;
+    height: 150px;
   }
 
   .nav nav { margin-left: 27rem; } /* tu ajuste original */
