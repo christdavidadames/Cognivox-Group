@@ -549,6 +549,7 @@ a:hover { text-decoration: underline; }
     justify-self: center;     /* centra el cuadro */
     width: min(760px, 100%);  /* ajusta el ancho del cuadro */
   }
+}
 
 /* =========================================================
    7) REGLAS PARA PC / LAPTOP (DESKTOP)
@@ -654,3 +655,4 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
