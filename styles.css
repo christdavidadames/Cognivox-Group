@@ -448,11 +448,11 @@ a:hover { text-decoration: underline; }
 
 .services-grid .service-img{
   width: 100%;
-  height: 180px;
+  height: 200px;
   max-width: none;
   object-fit: contain;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto .4rem;
 }
 
 /* Botón dentro de servicios: que contraste (rosado) */
@@ -724,6 +724,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
