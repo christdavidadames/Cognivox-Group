@@ -467,6 +467,10 @@ a:hover { text-decoration: underline; }
   .hero{ padding: 1rem 0 1.5rem; }
   .hero-visual{ aspect-ratio: 16 / 7; }
   .hero-caption{ font-size: clamp(1.15rem, 3.2vw, 1.9rem); }
+
+  .services-grid{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* =========================================================
@@ -608,6 +612,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
