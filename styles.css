@@ -447,6 +447,21 @@ a:hover { text-decoration: underline; }
   gap: 1rem;
 }
 
+/* ABOUT: centra los íconos/imágenes */
+.info-block .block-icon{
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem; /* centrado + separación abajo */
+  width: 96px;         /* ajusta si quieres */
+  height: 96px;
+}
+
+.info-block .block-icon img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .footer{
   color: #fff;
   background: linear-gradient(
@@ -519,6 +534,8 @@ a:hover { text-decoration: underline; }
    .services-grid{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
    /* ABOUT (Nosotros): tablet y superior */
 @media (min-width: 768px){
   .about-grid{
@@ -532,7 +549,6 @@ a:hover { text-decoration: underline; }
     justify-self: center;     /* centra el cuadro */
     width: min(760px, 100%);  /* ajusta el ancho del cuadro */
   }
-}
 
 /* =========================================================
    7) REGLAS PARA PC / LAPTOP (DESKTOP)
