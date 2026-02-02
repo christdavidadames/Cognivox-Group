@@ -466,7 +466,7 @@ a:hover { text-decoration: underline; }
 .ValoresPNG{
   width: 100%;
   height: auto;
-  transform: scale(4.35);
+  transform: scale(3.35);
 }
 
 /* ABOUT: centra los íconos/imágenes */
@@ -677,6 +677,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
