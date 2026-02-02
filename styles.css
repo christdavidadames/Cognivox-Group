@@ -460,13 +460,22 @@ a:hover { text-decoration: underline; }
   color: #fff;
 }
 
+/* ABOUT – tamaño de iconos */
+.MisionPNG,
+.VisionPNG,
+.ValoresPNG{
+  width: 100%;
+  height: auto;
+  transform: scale(1.35);
+}
+
 /* ABOUT: centra los íconos/imágenes */
 .info-block .block-icon{
   display: grid;
   place-items: center;
   margin: 0 auto 1rem; /* centrado + separación abajo */
-  width: 240px;         /* ajusta si quieres */
-  height: 240px;
+  width: 96px;         /* ajusta si quieres */
+  height: 96px;
 }
 
 .info-block .block-icon img{
@@ -668,6 +677,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
