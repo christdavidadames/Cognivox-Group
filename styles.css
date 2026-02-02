@@ -498,6 +498,10 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;}
+
+   .services-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* =========================================================
@@ -529,6 +533,10 @@ a:hover { text-decoration: underline; }
      sin romper el responsive. Controlado por variable. */
   .header-main .container.nav{
     transform: translateX(calc(-1 * var(--header-shift-desktop)));
+  }
+
+  .services-grid{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -600,6 +608,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
