@@ -448,7 +448,7 @@ a:hover { text-decoration: underline; }
 
 /* Imagen arriba, centrada */
 .services-grid .service-img{
-  width: 300px;          /* ajusta si quieres (72–110 suele verse bien) */
+  width: 800px;          /* ajusta si quieres (72–110 suele verse bien) */
   height: 150px;
   object-fit: contain;
   display: block;
@@ -720,6 +720,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
