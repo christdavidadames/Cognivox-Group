@@ -452,8 +452,8 @@ a:hover { text-decoration: underline; }
   display: grid;
   place-items: center;
   margin: 0 auto 1rem; /* centrado + separación abajo */
-  width: 140px;         /* ajusta si quieres */
-  height: 140px;
+  width: 240px;         /* ajusta si quieres */
+  height: 240px;
 }
 
 .info-block .block-icon img{
@@ -655,5 +655,6 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
