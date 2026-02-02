@@ -432,6 +432,16 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
+/* Centrar TODO el texto dentro de las 3 tarjetas de servicios */
+.services-grid .card{
+  text-align: center;
+}
+
+/* Centrar el botón */
+.services-grid .card .btn{
+  margin-inline: auto;
+}
+
 .footer{
   color: #fff;
   background: linear-gradient(
@@ -610,6 +620,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
