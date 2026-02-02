@@ -431,6 +431,48 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
+/* =========================================================
+   SERVICIOS (INDEX) – cards dark-blue + texto blanco + imagen
+   ========================================================= */
+.services-grid .service-card{
+  background: var(--blue-dark);
+  color: #fff;
+  border-color: rgba(233,138,166,.8);
+}
+
+/* Asegura que los textos dentro sean blancos */
+.services-grid .service-card p,
+.services-grid .service-card h3{
+  color: #fff;
+}
+
+/* Imagen arriba, centrada */
+.services-grid .service-img{
+  width: 88px;          /* ajusta si quieres (72–110 suele verse bien) */
+  height: 88px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.75rem; /* separa un poco hacia abajo */
+}
+
+/* Botón dentro de servicios: que contraste (rosado) */
+.services-grid .service-card .btn{
+  background: var(--pink);
+  color: #fff !important;
+}
+
+/* Hover del botón dentro de servicios */
+.services-grid .service-card .btn:hover{
+  transform: scale(1.03);
+}
+
+/* Mantén tu estilo de “contenido centrado pero texto a la izquierda” */
+.services-grid .service-card > *{
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Servicios del index: bloque centrado, texto alineado a la izquierda */
 .services-grid .card > *{
   max-width: 320px;
@@ -678,6 +720,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
