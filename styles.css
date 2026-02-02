@@ -241,13 +241,11 @@ a:hover { text-decoration: underline; }
   background: var(--blue-dark);
   border: 2px solid var(--pink);
   border-radius: 18px;
-  padding: 1.25rem;
-
+  padding: 0;
   width: 100%;
-  max-width: 100%;
   min-width: 0;
-
-  max-height: 370px;
+  height: 370px;
+  max-height: none;
   overflow: hidden;
 }
 
@@ -255,13 +253,14 @@ a:hover { text-decoration: underline; }
   background: var(--pink);
   border: 2px solid var(--pink);
   border-radius: 18px;
-  padding: 0; 
+  padding: 0;
   width: 100%;
-  max-width: 100%;
   min-width: 0;
-  max-height: 370px;
+  height: 370px;
+  max-height: none;
   overflow: hidden;
 }
+
 
 /* Ajuste visual para que no se peguen */
 .hero-left{
@@ -611,6 +610,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
