@@ -447,6 +447,19 @@ a:hover { text-decoration: underline; }
   gap: 1rem;
 }
 
+/* ABOUT – bloques Misión / Visión / Valores */
+.info-block{
+  background: var(--blue-dark);
+  color: #fff;
+  border: 2px solid var(--pink);
+}
+
+.info-block p,
+.info-block li,
+.info-block strong{
+  color: #fff;
+}
+
 /* ABOUT: centra los íconos/imágenes */
 .info-block .block-icon{
   display: grid;
@@ -655,6 +668,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
