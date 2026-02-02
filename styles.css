@@ -467,6 +467,7 @@ a:hover { text-decoration: underline; }
   width: 100%;
   height: auto;
   transform: scale(3.35);
+  margin-top: .5rem;
 }
 
 /* ABOUT: centra los íconos/imágenes */
@@ -677,6 +678,7 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
 
 
 
