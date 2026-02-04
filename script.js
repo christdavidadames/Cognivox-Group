@@ -161,3 +161,31 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(nextSlide, DURATION);
 });
 
+// ====== Menú móvil: toggle panel + toggle submenú Servicios ======
+(() => {
+  const menuBtn = document.getElementById("menuBtn");
+  const mobilePanel = document.getElementById("mobilePanel");
+
+  const servicesBtn = document.getElementById("mServicesToggle");
+  const servicesMenu = document.getElementById("mServicesMenu");
+
+  if (!menuBtn || !mobilePanel) return;
+
+  // Abre/cierra panel principal
+  menuBtn.addEventListener("click", () => {
+    const open = !mobilePanel.classList.contains("hidden");
+    mobilePanel.classList.toggle("hidden", open);
+    menuBtn.setAttribute("aria-expanded", String(!open));
+  });
+
+  // Abre/cierra submenú Servicios
+  if (servicesBtn && servicesMenu) {
+    servicesBtn.addEventListener("click", () => {
+      const open = !servicesMenu.classList.contains("hidden");
+      servicesMenu.classList.toggle("hidden", open);
+      servicesBtn.setAttribute("aria-expanded", String(!open));
+    });
+  }
+})();
+
+
