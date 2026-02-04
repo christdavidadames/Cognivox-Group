@@ -840,4 +840,43 @@ a:hover { text-decoration: underline; }
   .mobile-nav-links a.btn-cita:hover{
     background: var(--pink) !important;
   }
+/* =========================================================
+   MÓVIL HORIZONTAL: menú en grilla 3x3 + cita abajo
+   ========================================================= */
+@media (max-width: 1099px) and (orientation: landscape){
+  /* los botones se ordenan en 3 columnas */
+  .mobile-nav-links{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  /* que los items (a y button) ocupen toda su celda */
+  .mobile-nav-links a,
+  .mobile-nav-links button{
+    width: 100%;
+  }
+
+  /* El botón "Servicios" debe comportarse como “tile” */
+  .mobile-drop-btn{
+    margin: 0; /* por si tuvieras márgenes viejos */
+  }
+
+  /* El submenú debe ocupar toda la fila y verse debajo del botón */
+  .mobile-submenu{
+    grid-column: 1 / -1;
+    padding-left: 0;
+    margin-top: .2rem;
+
+    /* opcional: que los servicios también vayan en 3 columnas */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .35rem;
+  }
+
+  /* "Agende su cita" siempre al final ocupando toda la fila */
+  .mobile-nav-links a.btn-cita{
+    grid-column: 1 / -1;
+  }
+}
 }
