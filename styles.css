@@ -163,9 +163,14 @@ a:hover { text-decoration: underline; }
    ========================================================= */
 
 .mobile-panel{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   background: #fff;
   border-bottom: 1px solid rgba(229,231,235,.95);
   padding: .75rem 0;
+  z-index: 999;
 }
 
 /* Contenedor de links dentro del panel */
@@ -790,3 +795,4 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+
