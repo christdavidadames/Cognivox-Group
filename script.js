@@ -75,6 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const closePanel = () => {
     panel.classList.add('hidden');
     btn.setAttribute('aria-expanded', 'false');
+
+    if (servicesMenu && !servicesMenu.classList.contains('hidden')) {
+  servicesMenu.classList.add('hidden');
+  servicesBtn?.setAttribute('aria-expanded', 'false');
+}
   };
 
   btn.addEventListener('click', () => {
@@ -177,3 +182,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(nextSlide, DURATION);
 });
+
