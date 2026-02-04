@@ -38,22 +38,36 @@
         <a href="./multimedia.html">Multimedia</a>
         <a href="./contact.html" class="btn-cita">Agende su cita</a>
       </nav>
-
-      <button id="menuBtn" class="menu-btn" aria-label="Abrir menú" aria-controls="mobilePanel" aria-expanded="false">☰</button>
+<button class="menu-btn" id="menuBtn"
+        aria-label="Abrir menú"
+        aria-controls="mobilePanel"
+        aria-expanded="false"
+        type="button">☰</button>
     </div>
+    
+    <!-- ✅ PANEL BLANCO DEBAJO DEL HEADER (móvil/tablet) -->
+  <div class="mobile-panel hidden" id="mobilePanel">
+    <nav class="mobile-nav-links" aria-label="Navegación móvil">
+      <a href="./index.html">Inicio</a>
+      <a href="./about.html">Nosotros</a>
 
-    <div id="mobilePanel" class="hidden" aria-label="Menú móvil">
-      <div class="container" style="display:grid;gap:.5rem;">
-        <a href="./index.html">Inicio</a>
-        <a href="./about.html">Nosotros</a>
-        <a href="./services/logopedia.html">Logopedia</a>
+      <button class="mobile-drop-btn" id="mServicesToggle"
+              type="button" aria-expanded="false"
+              aria-controls="mServicesMenu">
+        Servicios ▾
+      </button>
+      <div class="mobile-submenu hidden" id="mServicesMenu">
         <a href="./services/psicologia.html">Psicología</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./events.html" aria-current="page">Eventos</a>
-        <a href="./multimedia.html">Multimedia</a>
-        <a href="./contact.html" class="btn-cita">Agende su cita</a>
+        <a href="./services/logopedia.html">Logopedia</a>
+        <a href="./services/formacion.html">Formación continua</a>
       </div>
-    </div>
+
+      <a href="./blog.html">Blog</a>
+      <a href="./events.html">Eventos</a>
+      <a href="./multimedia.html">Multimedia</a>
+      <a href="./contact.html" class="btn-cita">Agende su cita</a>
+    </nav>
+  </div>
   </header>
 
   <main id="contenido">
