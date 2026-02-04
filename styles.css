@@ -795,4 +795,49 @@ a:hover { text-decoration: underline; }
 .footer::before {
   animation: starsGlow 6s ease-in-out infinite;
 }
+/* =========================================================
+   HOTFIX MENÚ MÓVIL (solo <1100px)
+   - Panel blanco debajo del header
+   - btn-cita siempre rosa en panel móvil
+   - Mantener sticky (evitar que estrellas lo rompa)
+   ========================================================= */
 
+/* 1) Evita que el bloque de estrellas te rompa el sticky */
+.header-main{
+  position: sticky;
+  top: 0;
+}
+
+/* 2) SOLO móvil/tablet: header apilado para que el panel quede debajo */
+@media (max-width: 1099px){
+  .header-main{
+    display: flex;
+    flex-direction: column; /* 👈 clave: panel debajo */
+    align-items: stretch;
+    height: auto;           /* 👈 evita que “corte” el panel */
+  }
+
+  /* Barra superior (logo + hamburguesa) mantiene tu alto */
+  .header-main .container.nav{
+    height: 140px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Panel móvil: ya NO absolute, para que empuje el contenido */
+  .mobile-panel{
+    position: static !important;
+    width: 100%;
+    z-index: auto;
+  }
+
+  /* btn-cita siempre rosa dentro del panel */
+  .mobile-nav-links a.btn-cita{
+    background: var(--pink) !important;
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  .mobile-nav-links a.btn-cita:hover{
+    background: var(--pink) !important;
+  }
+}
