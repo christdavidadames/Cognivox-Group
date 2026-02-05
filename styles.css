@@ -496,6 +496,9 @@ a:hover { text-decoration: underline; }
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
+.card-psi-4{
+justify-self: center;
+}
 
 /* =========================================================
    SERVICIOS (INDEX) – cards dark-blue + texto blanco + imagen
@@ -880,3 +883,4 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
