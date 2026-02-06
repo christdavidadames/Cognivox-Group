@@ -507,6 +507,7 @@ a:hover { text-decoration: underline; }
   border-radius: 18px;
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  text-align: justify;
 }
 
 .card-psi-4{
@@ -901,3 +902,4 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04)
   }
 }
 }
+
