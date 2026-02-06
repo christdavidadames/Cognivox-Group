@@ -361,6 +361,18 @@ a:hover { text-decoration: underline; }
     align-items: center;
   }
 }
+
+.hero-psicologia{
+  background: var(--blue-dark);
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  height: 370px;
+  max-height: none;
+  overflow: hidden;
+}
 /* Logo-eslogan (flujo normal, NO absolute) */
 .logo-eslogan{
   width: min(520px, 92vw);
@@ -889,4 +901,5 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04)
   }
 }
 }
+
 
