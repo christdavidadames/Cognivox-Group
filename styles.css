@@ -369,7 +369,7 @@ a:hover { text-decoration: underline; }
   padding: 0;
   width: 100%;
   min-width: 0;
-  height: 370px;
+  height: 500px;
   max-height: none;
   overflow: hidden;
 }
@@ -901,5 +901,6 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04)
   }
 }
 }
+
 
 
