@@ -396,6 +396,19 @@ a:hover { text-decoration: underline; }
   max-height: none;
   overflow: hidden;
 }
+
+.hero-psicomotricidad{
+  background: transparent;
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+  max-height: none;
+  overflow: hidden;
+}
+
 /* Logo-eslogan (flujo normal, NO absolute) */
 .logo-eslogan{
   width: min(520px, 92vw);
@@ -1045,3 +1058,4 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
