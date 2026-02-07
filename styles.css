@@ -632,11 +632,12 @@ a:hover { text-decoration: underline; }
 
 .services-grid .service-img-3{
   width: 100%;
-  height: 230px;
+  height: 200px;
   max-width: none;
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
+  transform: scale(1.2);
 }
 
 .services-grid .service-img-4{
@@ -650,11 +651,12 @@ a:hover { text-decoration: underline; }
 
 .services-grid .service-img-5{
   width: 100%;
-  height: 230px;
+  height: 200px;
   max-width: none;
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
+  transform: scale(1.2);
 }
 
 /* Botón dentro de servicios: que contraste (rosado) */
