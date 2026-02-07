@@ -301,7 +301,7 @@ a:hover { text-decoration: underline; }
 /* HERO CONTENEDOR GENERAL */
 .hero{
   background: var(--bg); /* color crema */
-  padding: .75rem 0 .75rem;
+  padding: .50rem 0 .50rem;
 }
 
 /* CONTENEDORES INTERNOS */
@@ -913,4 +913,5 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
 
