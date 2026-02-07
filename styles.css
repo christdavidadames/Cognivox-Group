@@ -670,6 +670,38 @@ a:hover { text-decoration: underline; }
   font-size: 1.5rem;
 }
 
+/* =========================================================
+                  CARDS DEL SERVICIO LOGOPEDIA
+   ========================================================= */
+
+.card-logopedia-1{
+  background: #fff;
+  border: 2px solid var(--blue-dark);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.card-logopedia-2{
+  background: #fff;
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.card-logopedia-3{
+  background: #fff;
+  border: 2px solid var(--blue-dark);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.lista-logopedia li::marker {
+  color: #40e0d0;
+  font-size: 1.5rem;
+}
 
 /* =========================================================
    5) REGLAS PARA MÓVIL (PORTRAIT / LANDSCAPE)
