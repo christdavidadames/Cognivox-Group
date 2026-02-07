@@ -387,7 +387,7 @@ a:hover { text-decoration: underline; }
 
 .hero-formacion{
   background: transparent;
-  border: 2px solid var(--blue-dark);
+  border: 2px solid var(--pink);
   border-radius: 18px;
   padding: 0;
   width: 100%;
@@ -398,6 +398,18 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-psicomotricidad{
+  background: transparent;
+  border: 2px solid var(--blue-dark);
+  border-radius: 18px;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+  max-height: none;
+  overflow: hidden;
+}
+
+.hero-educativo{
   background: transparent;
   border: 2px solid var(--pink);
   border-radius: 18px;
@@ -800,6 +812,33 @@ a:hover { text-decoration: underline; }
 }
 
 /* =========================================================
+            CARDS DEL SERVICIO EDUCATIVO
+   ========================================================= */
+
+.card-educativo-1{
+  background: #fff;
+  border: 2px solid var(--pinkk);
+  border-radius: 18px;
+  grid-column: span 2;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.card-educativo-2{
+  background: #fff;
+  border: 2px solid var(--blue-dark);
+  border-radius: 18px;
+  grid-column: span 2;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.lista-educativo li::marker {
+  color: #0000FF;
+  font-size: 1.5rem;
+}
+
+/* =========================================================
    5) REGLAS PARA MÓVIL (PORTRAIT / LANDSCAPE)
    ========================================================= */
 
@@ -1058,4 +1097,3 @@ a:hover { text-decoration: underline; }
   }
 }
 }
-
