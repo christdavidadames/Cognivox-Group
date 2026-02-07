@@ -857,7 +857,6 @@ a:hover { text-decoration: underline; }
     .card-modalidad,
     .card-logopedia-3{
      grid-column: auto;
-    }
   }
 }
 
@@ -1075,6 +1074,7 @@ a:hover { text-decoration: underline; }
   .mobile-nav-links a.btn-cita:hover{
     background: var(--pink) !important;
   }
+}
 /* =========================================================
    MÓVIL HORIZONTAL: menú en grilla 3x3 + cita abajo
    ========================================================= */
@@ -1115,5 +1115,3 @@ a:hover { text-decoration: underline; }
   }
 }
 }
-
-
