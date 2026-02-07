@@ -640,9 +640,17 @@ a:hover { text-decoration: underline; }
                   CARDS DEL SERVICIO PSICOLOGIA
    ========================================================= */
 
-.card-psicologia{
+.card-psicologia-1{
   background: #fff;
-  border: 1px solid rgba(229,231,235,.95);
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.card-psicologia-2{
+  background: #fff;
+  border: 2px solid var(--blue-dark);
   border-radius: 18px;
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
@@ -912,6 +920,7 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
 
 
 
