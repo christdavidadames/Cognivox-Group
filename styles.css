@@ -820,6 +820,7 @@ a:hover { text-decoration: underline; }
   border: 2px solid var(--pink);
   border-radius: 18px;
   padding: 1.25rem;
+  gap: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
@@ -828,6 +829,7 @@ a:hover { text-decoration: underline; }
   border: 2px solid var(--blue-dark);
   border-radius: 18px;
   padding: 1.25rem;
+  gap: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
@@ -1095,4 +1097,5 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
 
