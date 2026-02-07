@@ -362,8 +362,20 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-psicologia{
-  background: var(--blue-dark);
+  background: transparent;
   border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  height: 500px;
+  max-height: none;
+  overflow: hidden;
+}
+
+.hero-logopedia{
+  background: transparent;
+  border: 2px solid var(--blue-dark);
   border-radius: 18px;
   padding: 0;
   width: 100%;
@@ -963,4 +975,3 @@ a:hover { text-decoration: underline; }
   }
 }
 }
-
