@@ -850,13 +850,14 @@ a:hover { text-decoration: underline; }
   .grid-3{
     grid-template-columns: 1fr;
   }
-}
-
-  .card-modalidad,
-  .card-logopedia-3{
-    grid-column: auto;
+    .card-modalidad,
+    .card-logopedia-3{
+     grid-column: auto;
+    }
   }
 }
+
+
 
 @media (max-width: 767px) and (orientation: landscape){
   .header-main{ height: 120px; }
@@ -1110,3 +1111,4 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
