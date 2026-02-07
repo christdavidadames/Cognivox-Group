@@ -650,7 +650,7 @@ a:hover { text-decoration: underline; }
 }
 
 .lista-psicologia li::marker {
-  color: #ff5733;
+  color: #88ff33;
   font-size: 1.5rem;
 }
 
@@ -913,5 +913,3 @@ a:hover { text-decoration: underline; }
   }
 }
 }
-
-
