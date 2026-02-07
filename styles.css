@@ -301,7 +301,6 @@ a:hover { text-decoration: underline; }
 /* HERO CONTENEDOR GENERAL */
 .hero{
   background: var(--bg); /* color crema */
-  padding: .50rem 0 .50rem;
 }
 
 /* CONTENEDORES INTERNOS */
@@ -499,7 +498,7 @@ a:hover { text-decoration: underline; }
 /* =========================================================
    4) TARJETAS / SECCIONES / FOOTER (BASE)
    ========================================================= */
-.section{ padding: .75rem 0; }
+.section{ padding: .50rem 0; }
 
 .card{
   background: #fff;
@@ -913,5 +912,6 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
 
 
