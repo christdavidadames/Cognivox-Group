@@ -516,6 +516,9 @@ a:hover { text-decoration: underline; }
   background: var(--blue-dark);
   color: #fff;
   border-color: rgba(233,138,166,.8);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
 /* Asegura que los textos dentro sean blancos */
@@ -565,6 +568,14 @@ a:hover { text-decoration: underline; }
 
 .services-grid .service-img{
   max-width: none;
+}
+
+.card-index{
+  background: #fff;
+  border: 1px solid rgba(229,231,235,.95);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
 /* =========================================================
