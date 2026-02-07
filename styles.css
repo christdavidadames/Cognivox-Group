@@ -343,7 +343,7 @@ a:hover { text-decoration: underline; }
    <div class="container grid grid-md-2 hero-grid"> ... */
 .hero-grid{
   align-items: stretch;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 /* Columnas */
@@ -912,6 +912,7 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
 
 
 
