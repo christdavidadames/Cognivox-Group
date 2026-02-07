@@ -385,7 +385,7 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
 }
 
-hero-formacion{
+.hero-formacion{
   background: transparent;
   border: 2px solid var(--blue-dark);
   border-radius: 18px;
