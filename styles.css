@@ -598,7 +598,8 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
-.services-grid .service-card-4, .service-card-5{
+.services-grid .service-card-4,
+.services-grid .service-card-5{
   background: var(--blue-dark);
   color: #fff;
   border-color: rgba(233,138,166,.8);
@@ -949,9 +950,14 @@ a:hover { text-decoration: underline; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;}
 
-   .services-grid{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .services-grid{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+  .services-grid > div{
+    grid-column: span 2;
+  }
+  .services-grid .service-card-4{ grid-column: 2 / span 2; }
+  .services-grid .service-card-5{ grid-column: 4 / span 2; }
 }
 
    /* ABOUT (Nosotros): tablet y superior */
@@ -994,14 +1000,22 @@ a:hover { text-decoration: underline; }
 
 /* DESKTOP NAV REAL (>= 1100) + SHIFT CONTROL */
 @media (min-width: 1100px){
-  /* Empuja TODO el header (logo + nav) a la izquierda
-     sin romper el responsive. Controlado por variable. */
-  .header-main .container.nav{
-    transform: translateX(calc(-1 * var(--header-shift-desktop)));
+  /* 6 columnas virtuales para poder centrar la última fila */
+  .services-grid{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .services-grid{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Todas las cards ocupan 2 columnas (equivale a 3 cards por fila) */
+  .services-grid > div{
+    grid-column: span 2;
+  }
+
+  /* Última fila centrada: 4 y 5 quedan debajo del “hueco” central */
+  .services-grid .service-card-4{
+    grid-column: 2 / span 2; /* columnas 2-3 */
+  }
+  .services-grid .service-card-5{
+    grid-column: 4 / span 2; /* columnas 4-5 */
   }
 }
 
