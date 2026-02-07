@@ -134,10 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const imgEl = document.getElementById('heroSlide');
-  if (!imgEl) return;
+  const container = document.querySelector('.hero-visual');
+  const imgA = document.getElementById('heroSlide');
+  if (!container || !imgA) return;
 
-  // Rutas de tus imágenes (en ./images/inicio/)
+  // Lista de imágenes
   const slides = [
     './images/inicio/logopedia-inicio-1.jpg',
     './images/inicio/psicologia-inicio-1.jpg',
@@ -152,34 +153,83 @@ document.addEventListener('DOMContentLoaded', () => {
     'Psicología inicio 2'
   ];
 
-  // Pre-cargar imágenes
+  // Preload (reduce “pegadas” por red)
   slides.forEach(src => { const im = new Image(); im.src = src; });
 
-  let i = 0;
-  const DURATION = 5000;
+  // Crea una segunda imagen (doble buffer) sin tocar el HTML
+  const imgB = imgA.cloneNode(true);
+  imgB.removeAttribute('id');
+  imgB.style.opacity = '0';
+  container.appendChild(imgB);
 
-  function animateOnce(el, className) {
-    el.classList.remove(className);
-    void el.offsetWidth;
-    el.classList.add(className);
+  let current = 0;
+  let showingA = true;
+
+  const DISPLAY_MS = 5000;
+  const FADE_MS = 600;
+
+  function waitForLoad(el){
+    return new Promise((resolve, reject) => {
+      // Si ya está cargada
+      if (el.complete && el.naturalWidth > 0) return resolve();
+
+      const onLoad = () => cleanup(resolve);
+      const onErr  = () => cleanup(() => reject(new Error('Image failed')));
+
+      function cleanup(done){
+        el.removeEventListener('load', onLoad);
+        el.removeEventListener('error', onErr);
+        done();
+      }
+
+      el.addEventListener('load', onLoad);
+      el.addEventListener('error', onErr);
+    });
   }
 
-  function nextSlide() {
-    i = (i + 1) % slides.length;
-    imgEl.src = slides[i];
-    imgEl.alt = alts[i];
+  async function showNext(){
+    const next = (current + 1) % slides.length;
 
-    // Re-lanzar animación SOLO de la imagen (contenedor .hero-visual)
-    animateOnce(imgEl.parentElement, 'is-animating');
+    const incoming = showingA ? imgB : imgA;
+    const outgoing = showingA ? imgA : imgB;
+
+    // Prepara la entrante, pero NO ocultes la actual todavía
+    incoming.src = slides[next];
+    incoming.alt = alts[next];
+
+    try {
+      // Espera a que cargue (evita fondo vacío)
+      await waitForLoad(incoming);
+
+      // decode() ayuda a evitar “parpadeos” en algunos móviles
+      if (incoming.decode) {
+        try { await incoming.decode(); } catch (_) {}
+      }
+
+      // Crossfade limpio
+      incoming.style.opacity = '1';
+      outgoing.style.opacity = '0';
+
+      // Espera al fade antes de confirmar el cambio
+      await new Promise(r => setTimeout(r, FADE_MS));
+
+      current = next;
+      showingA = !showingA;
+
+    } catch (e) {
+      // Si falla la carga, mantenemos la imagen actual (nada de fondo vacío)
+      incoming.style.opacity = '0';
+      outgoing.style.opacity = '1';
+    }
+
+    setTimeout(showNext, DISPLAY_MS);
   }
 
-  // Inicial
-  imgEl.src = slides[0];
-  imgEl.alt = alts[0];
+  // Asegura estado inicial
+  imgA.src = slides[0];
+  imgA.alt = alts[0];
+  imgA.style.opacity = '1';
+  imgB.style.opacity = '0';
 
-  // Primera animación al cargar
-  animateOnce(imgEl.parentElement, 'is-animating');
-
-  setInterval(nextSlide, DURATION);
+  setTimeout(showNext, DISPLAY_MS);
 });
-
