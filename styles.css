@@ -191,6 +191,8 @@ a:hover { text-decoration: underline; }
   border-radius: 12px;
   text-decoration: none;
   background: rgba(31,60,136,.06);
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .mobile-nav-links a:hover{
@@ -204,10 +206,12 @@ a:hover { text-decoration: underline; }
   border: 1px solid rgba(229,231,235,.95);
   background: rgba(31,60,136,.06);
   color: var(--blue);
-  font-weight: 800;
+  font-weight: 700;
   border-radius: 12px;
   padding: .65rem .75rem;
   cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 /* Submenú Servicios */
@@ -1111,4 +1115,5 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
 
