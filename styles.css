@@ -817,9 +817,8 @@ a:hover { text-decoration: underline; }
 
 .card-educativo-1{
   background: #fff;
-  border: 2px solid var(--pinkk);
+  border: 2px solid var(--pink);
   border-radius: 18px;
-  grid-column: span 2;
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
@@ -828,7 +827,6 @@ a:hover { text-decoration: underline; }
   background: #fff;
   border: 2px solid var(--blue-dark);
   border-radius: 18px;
-  grid-column: span 2;
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
@@ -1097,3 +1095,4 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
