@@ -510,7 +510,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* =========================================================
-   SERVICIOS (INDEX) – cards dark-blue + texto blanco + imagen
+                     CARDS DEL INDEX
    ========================================================= */
 .services-grid .service-card{
   background: var(--blue-dark);
@@ -554,13 +554,6 @@ a:hover { text-decoration: underline; }
 
 /* Mantén tu estilo de “contenido centrado pero texto a la izquierda” */
 .services-grid .service-card > *{
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Servicios del index: bloque centrado, texto alineado a la izquierda */
-.services-grid .card > *{
   max-width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -903,3 +896,4 @@ a:hover { text-decoration: underline; }
   }
 }
 }
+
