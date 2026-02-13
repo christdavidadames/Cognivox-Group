@@ -315,6 +315,39 @@ a:hover { text-decoration: underline; }
   transform: scale(1.03);
 }
 
+/* Botón flotante: fijo abajo a la derecha */
+.btn-float-cita{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+
+  font-size: 18px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  min-width: 180px;
+  text-align: center;
+
+  /* Oculto al cargar */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* Animación de entrada */
+  transform: translateX(10px) translateY(10px);
+  transition: opacity .35s ease, transform .35s ease, visibility 0s linear .35s;
+}
+
+/* Visible cuando se activa */
+.btn-float-cita.is-visible{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0) translateY(0);
+  transition: opacity .35s ease, transform .35s ease, visibility 0s;
+}
+
 /* =========================================================
    3) HERO (BASE: móvil-first)
    ========================================================= */
@@ -684,10 +717,16 @@ a:hover { text-decoration: underline; }
   border: 2px solid var(--pink);
 }
 
-.info-block p,
-.info-block li,
-.info-block strong{
-  color: #fff;
+.info-block-2 p,
+.info-block-2 li,
+.info-block-2 strong{
+color: var(--text);
+margin: 0.35rem 0;
+}
+
+.info-block-2{
+  background: var(--bg);
+  border: 2px solid var(--blue-dark);
 }
 
 /* ABOUT – tamaño de iconos */
@@ -732,6 +771,67 @@ a:hover { text-decoration: underline; }
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* =========================================================
+   ABOUT – Equipo (info-block-2)
+   ========================================================= */
+
+/* Crea la grilla de 2 columnas (tu HTML usa: class="grid grid-2") */
+.grid-about{
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: stretch;
+}
+
+/* Desktop / tablet: 2 columnas */
+@media (min-width: 768px){
+  .grid-about{
+    grid-template-columns: repeat(2, minmax(0, 420px)); 
+    justify-content: center;
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+  }
+}
+
+/* Reduce tamaño de los cards del equipo */
+.info-block-2{
+  width: 100%;
+  max-width: 420px; 
+  padding: 1rem;
+  border-radius: 18px;
+}
+
+/* Centra la imagen del team dentro del card */
+.info-block-2 .img-about{
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+/* Foto circular (estilo “avatar”) */
+.img-about-1{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 3px solid rgba(233,138,166,.85);
+}
+
+.img-about-2{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 3px solid rgba(4, 19, 61);
+}
+/* (Opcional) bajar un poco el tamaño del nombre para que no se vea enorme */
+.info-block-2 h2{
+  font-size: 1.70rem;
+  line-height: 1.2;
+  margin: 0.35rem 0 0.25rem;
+  color: var(--blue-dark);
 }
 
 /* =========================================================
@@ -885,6 +985,21 @@ a:hover { text-decoration: underline; }
 .lista-educativo li::marker {
   color: #0000FF;
   font-size: 1.5rem;
+}
+
+/* =========================================================
+            CARDS CONTACTO
+   ========================================================= */
+
+.card-contact{
+background: #fff;
+grid-column: 1 / -1;
+justify-self: center;
+width: min(760px, 100%);
+border: 1px solid rgba(229,231,235,.95);
+border-radius: 18px;
+padding: 1.25rem;
+box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
 /* =========================================================
