@@ -1014,13 +1014,37 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
   .grid-3{
     grid-template-columns: 1fr;
   }
+     /* Servicios (Home): evita que las imágenes se vean estiradas en móvil */
+  .services-grid img[class^="service-img-"]{
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
+  }
+
+  /* En móvil, quitamos escalados que pueden dar sensación de “alargado” */
+  .services-grid .service-img-3,
+  .services-grid .service-img-5{
+    transform: none;
+  }
+
+  /* Héroes de páginas de servicios: reduce altura en móvil */
+  .hero-psicologia,
+  .hero-logopedia,
+  .hero-psicomotricidad,
+  .hero-educativo,
+  .hero-formacion{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
     .card-modalidad,
     .card-logopedia-3{
      grid-column: auto;
   }
 }
-
-
 
 @media (max-width: 767px) and (orientation: landscape){
   .header-main{ height: 120px; }
