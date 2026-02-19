@@ -667,7 +667,7 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .services-grid .service-img-4{
@@ -686,7 +686,7 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .services-grid .service-img{
