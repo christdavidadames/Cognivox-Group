@@ -693,9 +693,25 @@ a:hover { text-decoration: underline; }
   max-width: none;
 }
 
-.card-index{
+.card-index-1{
   background: #fff;
-  border: 1px solid rgba(229,231,235,.95);
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.card-index-2{
+  background: #fff;
+  border: 2px solid var(--dark-blue);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.card-index-3{
+  background: #fff;
+  border: 2px solid var(--pink);
   border-radius: 18px;
   padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
@@ -1325,4 +1341,3 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
 .hide-visually{
   display:none;
 }
-
