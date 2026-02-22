@@ -869,7 +869,7 @@ margin: 0.35rem 0;
 .cover-2{
   width: 100%;
   max-width: 430px;
-  max-weight: 400px;
+  max-weight: 191.5px;
   padding: 1rem;
   border-radius: 18px;
 }
@@ -1363,3 +1363,4 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
 .hide-visually{
   display:none;
 }
+
