@@ -859,7 +859,21 @@ margin: 0.35rem 0;
   color: var(--blue-dark);
 }
 
-.cover{
+.cover-1{
+  width: 100%;
+  max-width: 420px; 
+  padding: 1rem;
+  border-radius: 18px;
+}
+
+.cover-2{
+  width: 100%;
+  max-width: 430px; 
+  padding: 1rem;
+  border-radius: 18px;
+}
+
+.cover-3{
   width: 100%;
   max-width: 420px; 
   padding: 1rem;
