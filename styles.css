@@ -851,6 +851,17 @@ margin: 0.35rem 0;
   object-position: center 20%;
   border: 3px solid rgba(4, 19, 61);
 }
+
+.img-about-4{
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  object-position: left 30%;
+  border: 3px solid rgba(233,138,166,.85);
+}
+
 /* (Opcional) bajar un poco el tamaño del nombre para que no se vea enorme */
 .info-block-2 h2{
   font-size: 1.70rem;
