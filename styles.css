@@ -853,12 +853,11 @@ margin: 0.35rem 0;
 }
 
 .img-about-4{
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 30%;
-  object-position: left 30%;
+  object-position: center 20%;
   border: 3px solid rgba(233,138,166,.85);
 }
 
@@ -1375,3 +1374,4 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
 .hide-visually{
   display:none;
 }
+
