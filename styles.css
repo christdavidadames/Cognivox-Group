@@ -681,6 +681,16 @@ a:hover { text-decoration: underline; }
   transform: scale(1.1);
 }
 
+.services-grid .service-img-6{
+  width: 100%;
+  height: 200px;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto .1rem;
+  transform: scale(1);
+}
+
 .services-grid .service-img{
   max-width: none;
 }
