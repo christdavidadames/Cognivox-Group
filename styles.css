@@ -649,6 +649,7 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
+  transform: scale(1.1);
 }
 
 .services-grid .service-img-2{
@@ -658,6 +659,7 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
+  transform: scale(1.1);
 }
 
 .services-grid .service-img-3{
@@ -677,6 +679,7 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
+  transform: scale(1.1);
 }
 
 .services-grid .service-img-5{
@@ -686,7 +689,7 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   display: block;
   margin: 0 auto .1rem;
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 .services-grid .service-img{
