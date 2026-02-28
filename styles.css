@@ -1115,6 +1115,31 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
   }
 }
 
+.footer{
+padding: 1.25rem 0;
+}
+
+.footer .container.grid{
+gap: 1rem !important;
+}
+
+.footer .logo--footer{
+    width: min(260px, 70vw);
+    max-height: 95px;
+    height: auto;
+    margin: 0 auto .5rem;
+    object-fit: contain;
+  }
+
+.footer h4{
+    margin-top: 0;
+  }
+
+.footer p{
+    margin: .45rem 0;
+  }
+}
+
 @media (max-width: 767px) and (orientation: landscape){
   .header-main{ height: 120px; }
   .logo--header{ height: 120px; }
@@ -1385,4 +1410,3 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
 .hide-visually{
   display:none;
 }
-
