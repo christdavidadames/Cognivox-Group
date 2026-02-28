@@ -1121,14 +1121,6 @@ padding: 1.25rem 0;
 gap: 1rem !important;
 }
 
-.footer .logo--footer{
-    width: min(260px, 70vw);
-    max-height: 95px;
-    height: auto;
-    margin: 0 auto .5rem;
-    object-fit: contain;
-  }
-
 .footer h4{
     margin-top: 0;
   }
@@ -1409,3 +1401,4 @@ gap: 1rem !important;
 .hide-visually{
   display:none;
 }
+
