@@ -1113,9 +1113,7 @@ box-shadow: 0 2px 8px rgba(0,0,0,.04);
     .card-logopedia-3{
      grid-column: auto;
   }
-}
-
-.footer{
+   .footer{
 padding: 1.25rem 0;
 }
 
@@ -1138,6 +1136,7 @@ gap: 1rem !important;
 .footer p{
     margin: .45rem 0;
   }
+ }
 }
 
 @media (max-width: 767px) and (orientation: landscape){
