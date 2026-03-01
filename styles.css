@@ -1187,15 +1187,8 @@ gap: 1rem !important;
    /* ABOUT (Nosotros): tablet y superior */
 @media (min-width: 768px){
   .about-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* misión | visión */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* misión | visión | valores */
     align-items: stretch;
-  }
-
-  /* Valores ocupa toda la fila y queda centrado */
-  .about-grid .card--wide{
-    grid-column: 1 / -1;      /* ocupa las 2 columnas */
-    justify-self: center;     /* centra el cuadro */
-    width: min(760px, 100%);  /* ajusta el ancho del cuadro */
   }
 }
 
