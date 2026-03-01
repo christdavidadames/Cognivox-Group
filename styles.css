@@ -775,10 +775,9 @@ margin: 0.35rem 0;
 .info-valores{
   background: linear-gradient(
     to bottom, 
-    #0B64F4 0%,      
-    #639CF8 25%,     
-    #BBD4FC 50%,     
-    #639CF8 75%,     
+    #0B64F4 0%,
+    #BBD4FC 50%,
+    #639CF8 95%,
     #0B64F4 100%
   ) !important;
 
@@ -1459,3 +1458,4 @@ gap: 1rem !important;
 .hide-visually{
   display:none;
 }
+
