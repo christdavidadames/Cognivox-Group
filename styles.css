@@ -821,13 +821,13 @@ margin: 0.35rem 0;
 }
 
 /* Centra la imagen del team dentro del card */
-.info-block-2 .img-about{
+.info-block-2 .img-equipo{
   display: block;
   margin: 0 auto 0.75rem;
 }
 
 /* Foto circular (estilo “avatar”) */
-.img-about-1{
+.img-equipo-1{
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -836,7 +836,7 @@ margin: 0.35rem 0;
   border: 3px solid rgba(233,138,166,.85);
 }
 
-.img-about-2{
+.img-equipo-2{
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -845,7 +845,7 @@ margin: 0.35rem 0;
   border: 3px solid rgba(4, 19, 61);
 }
 
-.img-about-3{
+.img-equipo-3{
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -854,7 +854,7 @@ margin: 0.35rem 0;
   border: 3px solid rgba(4, 19, 61);
 }
 
-.img-about-4{
+.img-equipo-4{
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -863,7 +863,7 @@ margin: 0.35rem 0;
   border: 3px solid rgba(233,138,166,.85);
 }
 
-.img-about-5{
+.img-equipo-5{
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -1401,4 +1401,3 @@ gap: 1rem !important;
 .hide-visually{
   display:none;
 }
-
