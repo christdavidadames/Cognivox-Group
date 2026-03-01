@@ -760,9 +760,7 @@ MisionFooterPNG,
 VisionFooterPNG{
  width: 50px;
  height: 50px;
- display: flex;
- justify-content: center;
- align-items: flex-end;
+ margin-left: 50px;
 }
 
 /* ABOUT: centra los íconos/imágenes */
@@ -1402,3 +1400,4 @@ gap: 1rem !important;
 .hide-visually{
   display:none;
 }
+
