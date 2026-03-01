@@ -771,6 +771,29 @@ margin: 0.35rem 0;
   height: 96px;
 }
 
+.info-mision,
+.info-valores{
+  background: linear-gradient(
+    to bottom, 
+    #0B64F4 0%,      
+    #639CF8 25%,     
+    #BBD4FC 50%,     
+    #639CF8 75%,     
+    #0B64F4 100%
+  ) !important;
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.valor-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
 /* ABOUT – tamaño de iconos */
 .MisionPNG,
 .VisionPNG,
