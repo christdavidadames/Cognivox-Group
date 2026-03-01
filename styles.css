@@ -747,6 +747,30 @@ margin: 0.35rem 0;
   border: 2px solid var(--blue-dark);
 }
 
+.info-mision .block-icon{
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem; /* centrado + separación abajo */
+  width: 96px;         /* ajusta si quieres */
+  height: 96px;
+}
+
+.info-vision .block-icon{
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem; /* centrado + separación abajo */
+  width: 96px;         /* ajusta si quieres */
+  height: 96px;
+}
+
+.info-valores .block-icon{
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem; /* centrado + separación abajo */
+  width: 96px;         /* ajusta si quieres */
+  height: 96px;
+}
+
 /* ABOUT – tamaño de iconos */
 .MisionPNG,
 .VisionPNG,
