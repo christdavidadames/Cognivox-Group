@@ -762,6 +762,19 @@ margin: 0.35rem 0;
  margin-left: 25px;
 }
 
+.valor-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ListaValoresPNG {
+  width: 25px; 
+  height: 25px;
+  object-fit: contain;
+}
+
 /* ABOUT: centra los íconos/imágenes */
 .info-block .block-icon{
   display: grid;
