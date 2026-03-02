@@ -797,7 +797,7 @@ margin: 0.35rem 0;
   background: linear-gradient(
     to bottom, 
     #941077 0%,
-    #F06CD3 30%,
+    #F06CD3 50%,
     #F8BEEC 70%,
     #FDE8F8 100%
   ) !important;
@@ -1468,3 +1468,4 @@ gap: 1rem !important;
 .hide-visually{
   display:none;
 }
+
