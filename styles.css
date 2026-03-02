@@ -805,12 +805,17 @@ margin: 0.35rem 0;
 
 /* ABOUT – tamaño de iconos */
 .MisionPNG,
-.VisionPNG,
 .ValoresPNG{
   width: 100%;
   height: auto;
   transform: scale(2.35);
   margin-top: 1.0rem;
+}
+.VisionPNG{
+  width: 100%;
+  height: auto;
+  transform: scale(2.3);
+  margin-top: 1.0rem; 
 }
 
 .MisionFooterPNG,
@@ -1468,4 +1473,3 @@ gap: 1rem !important;
 .hide-visually{
   display:none;
 }
-
