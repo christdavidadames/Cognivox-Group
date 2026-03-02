@@ -793,6 +793,16 @@ margin: 0.35rem 0;
   margin-bottom: 5px;
 }
 
+.info-vision{
+  background: linear-gradient(
+    to bottom, 
+    #F339CB 0%,
+    #F76FD9 50%,
+    #F990E2 95%,
+    #F339CB 100%
+  ) !important;
+}
+
 /* ABOUT – tamaño de iconos */
 .MisionPNG,
 .VisionPNG,
