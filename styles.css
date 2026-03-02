@@ -826,6 +826,10 @@ margin: 0.35rem 0;
  margin-left: 25px;
 }
 
+.VisionFooterPNG{
+margin-top: 2rem;
+}
+
 .valor-item {
   display: flex;
   align-items: center;
