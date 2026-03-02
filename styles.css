@@ -815,7 +815,10 @@ margin: 0.35rem 0;
   width: 100%;
   height: auto;
   transform: scale(1.75);
-  margin-top: 1.0rem; 
+  margin-top: 1.0rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .MisionFooterPNG,
