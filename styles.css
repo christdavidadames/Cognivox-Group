@@ -801,6 +801,9 @@ margin: 0.35rem 0;
     #F8BEEC 70%,
     #FDE8F8 100%
   ) !important;
+.info-vision p{
+margin-top: 2rem;
+ }
 }
 
 /* ABOUT – tamaño de iconos */
@@ -828,10 +831,6 @@ margin: 0.35rem 0;
 
 .VisionFooterPNG{
 margin-top: 4rem;
-}
-
-.Vision p{
-margin-top: 2rem;
 }
 
 .valor-item {
