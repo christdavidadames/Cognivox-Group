@@ -347,8 +347,8 @@ a:hover { text-decoration: underline; }
 }
 
   .btn-float-cita img {
-    width: 100%;
-    height: auto;
+    width: 60px;
+    height: 60px;
     display: block;
 }
 
